@@ -1,6 +1,6 @@
-import Navbar from "@/components/sections/Navigations/Navbar";
+import Navbar from "@/components/sections/navigations/navbar";
 import { poppins, romain, suisse } from "@/lib/fonts";
-import Footer from "@/components/sections/Footer";
+import Footer from "@/components/sections/footer";
 
 export default function layout({ children }: { children: React.ReactNode }) {
   return (

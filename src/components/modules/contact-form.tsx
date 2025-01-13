@@ -1,5 +1,4 @@
 import { cn } from "@/lib/utils";
-import { useTranslations } from "next-intl";
 import React from "react";
 
 type Props = {
@@ -7,10 +6,20 @@ type Props = {
   subTitle?: string;
   isHideMessage?: boolean;
   className?: string;
+  formWrapperClassName?: string;
+  btnText?: string;
+  display?: "inline" | "block";
 };
 const ContactForm = (props: Props) => {
-  const { title, subTitle, isHideMessage = true, className } = props;
-  const t = useTranslations("contactForm");
+  const {
+    title,
+    subTitle,
+    isHideMessage = true,
+    className,
+    formWrapperClassName,
+    btnText = "Submit",
+    display = "inline"
+  } = props;
   return (
     <div className={cn("w-full py-8 pb-16 text-white md:pt-4", className)}>
       <div className="max-w-md px-4 mx-auto text-center sm:max-w-7xl md:px-8 xl:px-0">
@@ -24,55 +33,60 @@ const ContactForm = (props: Props) => {
             {subTitle}
           </p>
         )}
-        <div className="bg-white text-black rounded-lg shadow-md px-6 sm:px-10 md:px-[72px] py-7 mx-auto">
-          <form className="font-poppins">
+        <div
+          className={cn(
+            "bg-white text-black rounded-lg shadow-md px-6 sm:px-10 md:px-[72px] py-7 mx-auto font-poppins",
+            formWrapperClassName
+          )}
+        >
+          <form className="">
             <div className="grid grid-cols-1 gap-6 mb-6 sm:grid-cols-2">
               <div>
-                <label className="block mb-3 font-medium text-left">{t("name")}</label>
+                <label className="block mb-3 font-medium text-left">Name</label>
                 <input
                   type="text"
-                  placeholder={t("namePlaceholder")}
+                  placeholder="Enter First Name"
                   className="w-full border-gray-400 rounded-sm h-[52px] px-4 shadow-sm focus:ring-black focus:border-black border text-sm"
                 />
               </div>
               <div>
                 <label className="block mb-3 font-medium text-left">
-                  {t("lastName")}
+                  Last Name
                 </label>
                 <input
                   type="text"
-                  placeholder={t("lastNamePlaceholder")}
+                  placeholder="Enter Last Name"
                   className="w-full border-gray-400 rounded-sm h-[52px] px-4 shadow-sm focus:ring-black focus:border-black border text-sm"
                 />
               </div>
               <div>
                 <label className="block mb-3 font-medium text-left">
-                  {t("phone")}
+                  Phone
                 </label>
                 <input
                   type="text"
-                  placeholder={t("phonePlaceholder")}
+                  placeholder="Enter Phone Number"
                   className="w-full border-gray-400 rounded-sm h-[52px] px-4 shadow-sm focus:ring-black focus:border-black border text-sm"
                 />
               </div>
               <div>
                 <label className="block mb-3 font-medium text-left">
-                  {t("email")}{" "}
-                  <span className="font-normal text-gray-600">{t("optional")}</span>
+                  Email{" "}
+                  <span className="font-normal text-gray-600">[optional]</span>
                 </label>
                 <input
                   type="text"
-                  placeholder={t("emailPlaceholder")}
+                  placeholder="Enter Email"
                   className="w-full border-gray-400 rounded-sm h-[52px] px-4 shadow-sm focus:ring-black focus:border-black border text-sm"
                 />
               </div>
               {!isHideMessage && (
                 <div className="col-span-2">
                   <label className="block mb-3 font-medium text-left">
-                    {t("message")}
+                    How can we help you?
                   </label>
                   <textarea
-                    placeholder={t("messagePlaceholder")}
+                    placeholder="Enter your Message here."
                     rows={5}
                     className="w-full p-4 text-sm border border-gray-400 rounded-sm shadow-sm focus:ring-black focus:border-black"
                   />
@@ -90,26 +104,30 @@ const ContactForm = (props: Props) => {
                   htmlFor="terms"
                   className="font-suisse  ml-2  text-[#009BDC] text-sm sm:text-base"
                 >
-                  {t("agree")}{" "}
+                  I agree with{" "}
                   <a
                     href="#"
                     className="underline "
                   >
-                    {t("termsOfUse")}
-                  </a>
-                  {t("and")}{" "}
+                    Terms of Use
+                  </a>{" "}
+                  and{" "}
                   <a
                     href="#"
                     className="underline "
                   >
-                    {t("privacyPolicy")}
+                    Privacy Policy
                   </a>
                 </label>
               </div>
-              <button className="font-suisse bg-[#009BDC] text-xl  text-[#F7F9FC] py-3 px-8 rounded-full shadow-md">
-                {t("submit")}
-              </button>
+
+              {display === "inline" && <ContactFormButton text={btnText} />}
             </div>
+            {display === "block" && (
+              <div className="flex justify-start mt-8">
+                <ContactFormButton text={btnText} />
+              </div>
+            )}
           </form>
         </div>
       </div>
@@ -118,3 +136,15 @@ const ContactForm = (props: Props) => {
 };
 
 export default ContactForm;
+
+type ContactFormButtonProps = {
+  text: string;
+};
+const ContactFormButton = (props: ContactFormButtonProps) => {
+  const { text } = props;
+  return (
+    <button className="font-suisse bg-[#009BDC] text-xl  text-[#F7F9FC] py-3 px-8 rounded-full shadow-md">
+      {text}
+    </button>
+  );
+};

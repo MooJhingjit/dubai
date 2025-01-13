@@ -2,11 +2,11 @@ import React from "react";
 import { generateHreflang } from "@/lib/utils";
 import { availableLanguages } from "@/lib/config";
 import { getTranslations } from "next-intl/server";
-import Hero from "@/components/sections/Home/Hero";
-import Discover from "@/components/sections/Home/Discover";
-import Investment from "@/components/sections/Home/Investment";
-import Team from "@/components/sections/Home/Team";
-import ContactForm from "@/components/modules/ContactForm";
+import Hero from "@/components/sections/home/hero";
+import Discover from "@/components/sections/home/discover";
+import Investment from "@/components/sections/home/investment";
+import Team from "@/components/sections/home/team";
+import ContactForm from "@/components/modules/contact-form";
 
 export async function generateMetadata({ params }: {
   params: Promise<{

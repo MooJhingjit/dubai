@@ -2,8 +2,8 @@
 
 // Import Swiper React components
 import { SwiperSlide } from "swiper/react";
-import SwiperSlider from "../../modules/SwiperSlider";
-import CardArea from "../../modules/Cards/CardArea";
+import SwiperSlider from "../../modules/swiper-slider";
+import CardArea from "../../modules/cards/card-area";
 
 const data = [
   {

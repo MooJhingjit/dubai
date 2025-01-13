@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from 'react'
 import Image from 'next/image'
-import Navigation from "./Navigation";
+import Navigation from "./navigation";
 
 const Navbar = () => {
   return (

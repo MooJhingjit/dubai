@@ -1,5 +1,5 @@
 import React from "react";
-import InvestmentSlider from "./InvestmentSlider";
+import InvestmentSlider from "./investment-slider";
 import { useTranslations } from "next-intl";
 
 const Investment = () => {
