@@ -48,5 +48,23 @@
     "about": "About",
     "people": "People",
     "contact": "Contact Us"
+  },
+  "contactForm": {
+    "name": "Name",
+    "namePlaceholder": "Enter First Name",
+    "lastName": "Last Name",
+    "lastNamePlaceholder": "Enter Last Name",
+    "phone": "Phone",
+    "phonePlaceholder": "Enter Phone Number",
+    "email": "Email",
+    "optional": "[optional]",
+    "emailPlaceholder": "Enter Email",
+    "message": "How can we help you?",
+    "messagePlaceholder": "Enter your Message here.",
+    "agree": "I agree with",
+    "termsOfUse": "Terms of Use",
+    "and": "and",
+    "privacyPolicy": "Privacy Policy",
+    "submit": "Submit"
   }
 }

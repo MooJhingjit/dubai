@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
 import React from "react";
 
 type Props = {
@@ -9,6 +10,7 @@ type Props = {
 };
 const ContactForm = (props: Props) => {
   const { title, subTitle, isHideMessage = true, className } = props;
+  const t = useTranslations("contactForm");
   return (
     <div className={cn("w-full py-8 pb-16 text-white md:pt-4", className)}>
       <div className="max-w-md px-4 mx-auto text-center sm:max-w-7xl md:px-8 xl:px-0">
@@ -26,51 +28,51 @@ const ContactForm = (props: Props) => {
           <form className="font-poppins">
             <div className="grid grid-cols-1 gap-6 mb-6 sm:grid-cols-2">
               <div>
-                <label className="block mb-3 font-medium text-left">Name</label>
+                <label className="block mb-3 font-medium text-left">{t("name")}</label>
                 <input
                   type="text"
-                  placeholder="Enter First Name"
+                  placeholder={t("namePlaceholder")}
                   className="w-full border-gray-400 rounded-sm h-[52px] px-4 shadow-sm focus:ring-black focus:border-black border text-sm"
                 />
               </div>
               <div>
                 <label className="block mb-3 font-medium text-left">
-                  Last Name
+                  {t("lastName")}
                 </label>
                 <input
                   type="text"
-                  placeholder="Enter Last Name"
+                  placeholder={t("lastNamePlaceholder")}
                   className="w-full border-gray-400 rounded-sm h-[52px] px-4 shadow-sm focus:ring-black focus:border-black border text-sm"
                 />
               </div>
               <div>
                 <label className="block mb-3 font-medium text-left">
-                  Phone
+                  {t("phone")}
                 </label>
                 <input
                   type="text"
-                  placeholder="Enter Phone Number"
+                  placeholder={t("phonePlaceholder")}
                   className="w-full border-gray-400 rounded-sm h-[52px] px-4 shadow-sm focus:ring-black focus:border-black border text-sm"
                 />
               </div>
               <div>
                 <label className="block mb-3 font-medium text-left">
-                  Email{" "}
-                  <span className="font-normal text-gray-600">[optional]</span>
+                  {t("email")}{" "}
+                  <span className="font-normal text-gray-600">{t("optional")}</span>
                 </label>
                 <input
                   type="text"
-                  placeholder="Enter Email"
+                  placeholder={t("emailPlaceholder")}
                   className="w-full border-gray-400 rounded-sm h-[52px] px-4 shadow-sm focus:ring-black focus:border-black border text-sm"
                 />
               </div>
               {!isHideMessage && (
                 <div className="col-span-2">
                   <label className="block mb-3 font-medium text-left">
-                    How can we help you?
+                    {t("message")}
                   </label>
                   <textarea
-                    placeholder="Enter your Message here."
+                    placeholder={t("messagePlaceholder")}
                     rows={5}
                     className="w-full p-4 text-sm border border-gray-400 rounded-sm shadow-sm focus:ring-black focus:border-black"
                   />
@@ -88,25 +90,24 @@ const ContactForm = (props: Props) => {
                   htmlFor="terms"
                   className="font-suisse  ml-2  text-[#009BDC] text-sm sm:text-base"
                 >
-                  I agree with{" "}
+                  {t("agree")}{" "}
                   <a
                     href="#"
                     className="underline "
                   >
-                    Terms of Use
+                    {t("termsOfUse")}
                   </a>
-                  and{" "}
+                  {t("and")}{" "}
                   <a
                     href="#"
                     className="underline "
                   >
-                    Privacy Policy
+                    {t("privacyPolicy")}
                   </a>
                 </label>
               </div>
-
               <button className="font-suisse bg-[#009BDC] text-xl  text-[#F7F9FC] py-3 px-8 rounded-full shadow-md">
-                Submit
+                {t("submit")}
               </button>
             </div>
           </form>
