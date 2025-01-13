@@ -1,0 +1,46 @@
+import React from "react";
+import { generateHreflang } from "@/lib/utils";
+import { availableLanguages } from "@/lib/config";
+import { getTranslations } from "next-intl/server";
+import Hero from "@/components/sections/Home/Hero";
+import Discover from "@/components/sections/Home/Discover";
+import Investment from "@/components/sections/Home/Investment";
+import Team from "@/components/sections/Home/Team";
+import ContactForm from "@/components/modules/ContactForm";
+
+export async function generateMetadata({ params }: {
+  params: { locale: string }
+}) {
+  const t = await getTranslations("Home.Meta");
+  const links = generateHreflang(availableLanguages, "/");
+
+  return {
+    title: t("Title"),
+    description: t("Description"),
+    alternates: {
+      canonical: links[params.locale as typeof availableLanguages[number]],
+      languages: links
+    },
+  };
+}
+
+export default function HomePage() {
+  return (
+    <>
+      <Hero />
+      <Discover />
+      <Investment />
+      <Team />
+      <ContactForm
+        title="Access The Latest Dubai Market Updates"
+        subTitle="Get exclusive real estate investment opportunities before they hit the
+          market."
+      />
+    </>
+  );
+}
+
+
+
+
+

@@ -1,0 +1,261 @@
+{
+  "Home": {
+    "Meta": {
+      "Title": "RydeLimo 高端豪华车服务 | 安全可靠，覆盖全亚洲",
+      "Description": "RydeLimo：您可信赖的私人司机，为您提供安全、舒适、可靠的全亚洲出行服务。"
+    },
+    "Hero": {
+      "Title1": "一流的司机服务",
+      "Title2": "为全球专车司机服务设定标准。",
+      "Title3": "为您量身定制的卓越旅程。"
+    },
+    "Service": {
+      "Title": "我们的服务",
+      "Cards": [
+        {
+          "Title": "机场接送",
+          "Description": "我们的专业司机可追踪航班并帮助搬运行李，让您的航空和地面旅行无缝衔接。"
+        },
+        {
+          "Title": "按小时租赁",
+          "Description": "享受专属司机随时待命的灵活性，非常适合商务旅客或游览目的地的游客。"
+        },
+        {
+          "Title": "私人旅游",
+          "Description": "通过我们知识渊博的司机带领的个性化旅游，探索您的目的地，结合标志性景点与当地隐藏的瑰宝。"
+        },
+        {
+          "Title": "活動/車隊管理",
+          "Description": "無論您是舉辦企業活動、管理 VIP 運輸，還是監督大型聚會的物流，我們都能管理從運輸物流到現場支援的一切事宜，讓您安心地專注於您的活動。"
+        }
+      ],
+      "LearnMore": "了解更多"
+    },
+
+    "WhyChooseUs": {
+      "Title": "为什么选择RydeLimo",
+      "WeMeetYouAtTheArrivalHalls": {
+        "Title": "我们在到达大厅迎接您",
+        "Description": "经过长途飞行后，您最不需要担心的就是找到您的司机。我们训练有素的司机会在机场迎接您，并直接从到达大厅护送您到您的车辆。"
+      },
+      "24HoursSupport": {
+        "Title": "24小时支持",
+        "Description": "忘记航班延误或取消的压力——我们的团队实时监控所有航班，并始终可以帮助您处理任何需求。"
+      },
+      "UnwaveringCommitmentToSafety": {
+        "Title": "坚定的安全承诺",
+        "Description": "我们优先考虑乘客的安全和福祉，通过维护我们所有司机的最高安全标准。我们的安全承诺延伸到对驾驶表现的持续监控，确保每次乘车都符合我们的严格安全协议。"
+      },
+      "MultilingualExpertise": {
+        "Title": "多语言专业服务",
+        "Description": "与我们双语的客服中心和司机轻松沟通，向国际客户和游客提供卓越的服务。"
+      },
+      "UnparalleledHospitality": {
+        "Title": "无与伦比的款待",
+        "Description": "体验最好的豪华轿车服务的礼遇与尊贵。我们注重细节、专业性和无与伦比的舒适性，确保每一次乘坐都体现出优雅和客户满意度的巅峰体验。"
+      },
+      "ComfortAndLuxurious": {
+        "Title": "舒适与奢华",
+        "Description": "我们车队中的每一辆车都经过精心维护，确保每次旅程都有一尘不染的内外部。我们的车辆配备豪华、宽敞的座椅和最先进的设施，提供最大程度的舒适性，而平稳的行驶和宁静的氛围则让您可以根据需要放松或集中精力。"
+      }
+    },
+    "WhoWeAre": {
+      "Title": "我们是谁",
+      "p1": "<b>我们业务的核心</b>是连接、协作和协调的力量。我们为联盟成员设计和管理统一平台，确保所有成员公司客户的司机服务体验简化流畅。通过整合车队、标准化服务以及推出跨境连接产品，我们简化了旅程的每一步，使旅行更加顺畅和高效。",
+      "p2": "<b>除此之外</b>，我们利用在日本多年积累的运营经验，为联盟成员的司机提供培训项目，以保持一致且可靠的服务标准，无论客户身在何处。这一项目确保每位客户，无论是普通旅客还是高端客户，都能在全球范围内享受到同样高水平的关怀、安全和认可。通过创新技术和前瞻性的营销，我们不仅与全球旅行需求保持同步，还在引领潮流，跨越国界变革客户体验。"
+    },
+    "HowItWorks": {
+      "Title": "操作方式",
+      "Description": "使用我们的平台简单明了，操作方式如下：",
+      "Steps": [
+        {
+          "StepNumber": 1,
+          "Title": "选择您的车辆",
+          "Description": "选择您的城市，输入路线详情，并选择您喜欢的车辆级别。"
+        },
+        {
+          "StepNumber": 2,
+          "Title": "确认您的预订",
+          "Description": "提供乘客信息，添加任何特殊要求，并确认您的预订。"
+        },
+        {
+          "StepNumber": 3,
+          "Title": "与您的司机会面",
+          "Description": "在接送前2小时收到您的司机信息，他们会举着带有您名字的牌子迎接您。只需三步即可体验一流的运输服务。"
+        }
+      ]
+    },
+    "TrustedExcellence": {
+      "Title": "值得信赖的卓越服务",
+      "AwardInfo": "荣获2023年和2024年TripAdvisor旅行者之选奖。",
+      "FeedbackInfo": "选择RydeLimo，体验全球旅行者信赖的交通服务。",
+      "Feedbacks": [
+        {
+          "Author": "Haruka T., 东京",
+          "Text": "从头到尾的完美服务。RydeLimo 让我们的新加坡之行难以忘怀。"
+        },
+        {
+          "Author": "Michael L., 新加坡",
+          "Text": "专业、准时、礼貌。这是我在东京体验过的最好的司机服务。"
+        }
+      ]
+    },
+    "BrandPushTrustBadge": {
+      "AS_SEEN_ON":  "如何看待"
+    },
+    "Footer": "页脚"
+  },
+  "Navbar": {
+    "AirportTransfer": "机场接送",
+    "CarServices": "汽车服务",
+    "Reservation": "预订",
+    "Fleet": "车队",
+    "News": "新闻"
+  },
+  "Navigation": {
+    "ourServices": {
+      "trigger": "我们的服务",
+      "airportTransfers": {
+        "Title": "机场接送",
+        "Description": "从机场到目的地的无缝交通服务，由专业司机提供。"
+      },
+      "hourlyCharters": {
+        "Title": "按小时包车",
+        "Description": "按小时提供灵活的司机服务，量身定制以满足您的需求。"
+      },
+      "privateTours": {
+        "Title": "私人旅行",
+        "Description": "由专家司机带领的个性化旅行，探索标志性景点和隐藏的宝藏。"
+      }
+    },
+    "forBusiness": {
+      "trigger": "商务服务",
+      "corporations": {
+        "Title": "企业客户",
+        "Description": "为企业客户量身定制的优质交通解决方案。"
+      },
+      "eventsFleetManagement": {
+        "Title": "活动/车队管理",
+        "Description": "为活动和车队管理提供可靠且专业的交通解决方案。"
+      },
+      "strategicPartners": {
+        "Title": "战略合作伙伴",
+        "Description": "合作提供卓越的交通服务，以满足不断增长的需求。"
+      },
+      "travelAgencies": {
+        "Title": "旅行社",
+        "Description": "为旅行社客户提供可靠和可定制的旅行选择。"
+      }
+    },
+    "aboutUs": {
+      "Title": "关于我们"
+    },
+    "partnerships": {
+      "Title": "合作伙伴"
+    },
+    "blog": {
+      "Title": "博客"
+    }
+  },
+  "MobileBookingButton": {
+    "Title": "立即预订",
+    "Subtitle": "头等舱服务，头等舱车辆。"
+  },
+  "Footer": {
+    "AirportTransfer": "机场接送",
+    "CarServices": "汽车服务",
+    "Reservation": "预订",
+    "Fleet": "车队",
+    "ContactEmail": "联系我们",
+    "Contact": "联系方式",
+    "TypeEmail": "输入您的邮箱",
+    "explore": "探索 RydeLimo",
+    "RightsReserved": "2024 RydeLimo 公司 版权所有",
+    "TermsConditions": "条款和条件"
+  },
+
+  "BookingForm": {
+    "ThankYou": {
+      "Title": "谢谢",
+      "Subtitle": "我们将尽快与您联系以确认您的预订。"
+    },
+    "Form": {
+      "Tokyo": "东京",
+      "Singapore": "新加坡",
+      "From": "出发地",
+      "To": "目的地",
+      "Date": "日期",
+      "PickDate": "选择日期",
+      "Time": "时间",
+      "Continue": "继续",
+      "FullName": "全名",
+      "EmailAddress": "电子邮件地址",
+      "Phone": "电话号码",
+      "Message": "留言",
+      "Submit": "立即预订",
+      "ContactUs": "联系我们",
+      "LocationPlaceholder": "输入地点、位置",
+      "Send": "发送消息",
+      "GetInTouch": "与我们联系",
+      "TellMeMore": "告诉我更多",
+      "WorkWithUs": "与我们合作",
+      "ThankYou": "谢谢",
+      "ThankYouMessage": "我们将尽快与您联系以确认您的预订。"
+    }
+  },
+  "Sections": {
+    "Application": {
+      "Application": "应用程序",
+      "Title": "下载 RydeLimo 应用",
+      "Description": "通过 RydeLimo 应用程序，预订豪华出行、管理预订和跟踪您的司机只需轻点几下。体验便捷安全的高端交通服务，一切尽在一个平台上。"
+    }
+  },
+  "AboutUs": {
+    "Meta": {
+      "Title": "关于 RydeLimo | 专业司机和交通服务",
+      "Description": "RydeLimo 致力于提供满足每位客户需求的高端交通服务。从机场接送、按小时租车到私人旅行和活动车队管理，我们的专业司机团队确保您享受无缝、舒适的旅行体验。了解 RydeLimo 如何通过可靠、以客户为中心的服务提升您的旅程。"
+    },
+    "PageTitle": "关于我们",
+    "Text1": "Rydelimo 由日本首屈一指的出租车和豪华轿车服务公司 Tokyo MK 的所有者创立，延续了安全、卓越和奢华的传统。Tokyo MK 在提供一流的交通服务方面建立了良好的声誉，其车队包括劳斯莱斯、迈巴赫、奔驰、宝马、雷克萨斯和阿尔法德等车型，均由训练有素的司机驾驶。公司致力于满足客户的高标准需求，提供无缝的机场接送服务和独家豪华轿车租赁、旅行、会议、活动和展览的私人司机服务。在我们运营的所有城市都提供外语司机，确保所有客户享受到顺畅、舒适的体验。",
+    "Text2": "通过 Rydelimo，这种无与伦比的服务水平，以其对安全、舒适和专业性的坚定承诺而著称，现在在全球范围内都能享受到。感谢与世界一流合作伙伴的合作，我们继续坚持严格的标准和细致的程序与细节，这正是日本卓越的标志。",
+    "PromisedStandards": {
+      "Header": "我们的承诺标准",
+      "Text1": "我们的业务核心是连接、协作和协调的力量。我们设计并管理统一联盟的解决方案，确保为所有成员公司客户提供简化且无缝的司机驱动体验。",
+      "Text2": "通过与志同道合的服务合作伙伴共址、标准化安全和客户服务标准，以及引入跨境连接产品，我们简化了旅程的每一步。我们的计划还专注于识别优质客户，确保他们在全球范围内获得一致的认可和关怀。通过创新技术和前瞻性的营销，我们继续提升和改变全球旅行体验。"
+    },
+    "USP": {
+      "SafeDrivingTechniques": "安全驾驶技巧",
+      "Hospitality": "热情款待",
+      "SmartDressCode": "得体着装",
+      "CleanCar": "干净车辆",
+      "Bilingual": "双语服务",
+      "FocusOnSafetyPrograms": "注重安全计划"
+    }
+  },
+  "Partnerships": {
+    "Meta": {
+      "Title": "与 RydeLimo 合作 | 扩展您的司机业务和网络",
+      "Description": "通过 RydeLimo 的全球合作机会扩展您的业务。作为豪华轿车公司或独立司机加入我们的网络，接触全球客户群，受益于确保高服务标准的全面培训。我们共同提升服务质量，分享收入机会，并在全球范围内为客户提供卓越的关怀。"
+    },
+    "PageTitle": "合作伙伴",
+    "GrowBusinessTitle": "与我们一起增长您的业务收入",
+    "GrowBusinessText1": "想要扩展您的业务到国际市场吗？我们提供了完美的机会来保持您的服务标准，同时确保您的客户在任何地方都能得到优质的照顾。放心吧，我们的全面培训计划旨在支持您的成长，并为我们的客户带来安心，从而帮助您获得更多业务。",
+    "LimousineTitle": "豪华轿车与司机驾驶公司",
+    "LimousineText1": "加入我们的联盟，我们将客户网络专门与那些符合我们严格司机培训标准的合作伙伴分享。这个计划解决了许多人在将客户交给不熟悉的合作伙伴时感到的焦虑，这可能会危及我们辛苦建立的声誉。通过这个联盟。",
+    "LimousineText2": "我们正在建立一致的标准，让我们能够自信地分享和扩展我们的业务网络和收入来源，同时保持客户期望的高质量服务。我们共同成长，变得更强大、更可靠，确保为我们的客户和我们自己带来安心。",
+    "DriversTitle": "司机",
+    "DriversText1": "作为独立的司机驾驶？别担心，我们欢迎您加入我们的行列。我们为那些渴望提升的人提供全面的培训。一旦您达到我们对安全驾驶、客户服务和车辆维护的高标准，您就可以接触到来自全球各地的客户。",
+    "DriversText2": "多语言司机备受重视，我们有很多机会可以帮助您增加收入。脱颖而出，让我们帮助您取得成功。我们可以共同确保您和我们的客户都能享受卓越的服务和体验。"
+  },
+  "Blog": {
+    "Meta": {
+      "Title": "RydeLimo博客 | 为您的旅程提供洞察与灵感",
+      "Description": "RydeLimo博客 | 探索亚洲范围内豪华交通与高端旅行服务的专家建议、旅行故事以及最新动态。"
+    },
+    "Blog": "博客",
+    "Header": "为您的旅程提供洞察与灵感",
+    "Subheader": "探索亚洲范围内豪华交通与高端旅行服务的专家建议、旅行故事以及最新动态。",
+    "ViewAll": "查看全部",
+    "CategorySubheader": "获取有关{category_name}的最新资讯。"
+  }
+}

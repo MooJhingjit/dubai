@@ -2,20 +2,184 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* @font-face {
+  font-family: "Baikal";
+  src: url("/fonts/Baikal-VAR-VF.ttf.woff") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+} */
 
-@media (prefers-color-scheme: dark) {
+/* Now you can apply the font globally or to specific elements */
+/* body {
+  font-family: "Baikal", sans-serif;
+} */
+
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 10% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.sticky-book-now {
+  position: fixed;
+  top: 0;
+  right: 20px;
+  z-index: 1000;
+  display: none; /* Hidden by default */
 }
+.sticky-visible {
+  display: block; /* Show the button once it scrolls past */
+}
+
+.sticky-button-area {
+  z-index: 1000;
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Fade-out animation */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+/* Classes for animation */
+.sticky-button-animate {
+  animation: slideInFromRight 0.5s ease-out;
+}
+
+.sticky-button-fade-out {
+  animation: fadeOut 0.2s ease-out;
+}
+
+gojo-pwa-widget {
+  --gj-color-primary: #12b76a;
+  --gj-color-pickup-pin: #12b76a;
+  --gj-color-drop-off-pin: #f04438;
+  --gj-color-text: #101828;
+  --gj-color-divide: #f2f4f7;
+  /* Select options */
+  --gj-color-item-title: #101828;
+  --gj-color-item-hover: #f2f4f7;
+  --gj-color-item-description: #101828;
+  /* tab bar */
+  --gj-color-tab-bg: #f2f4f7;
+  --gj-color-tab-title: #12b76a;
+  --gj-color-tab-active-bg: #f8b831;
+  --gj-color-tab-compact-active-bg: #f8b831;
+  --gj-color-tab-active-title: #101828;
+
+  /* container */
+  --gj-widget-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.12);
+  --gj-color-widget-bg: #fff;
+  /* form control */
+  --gj-color-form-control-bg: #f9fafb;
+  --gj-color-input: #113859;
+  --gj-color-input-placeholder: #98a2b3;
+  --gj-color-label: #09121f;
+  /* buttons */
+  --gj-color-button-disabled: #f9fafb;
+  --gj-color-button-hover: #f8b831;
+  --gj-color-button-bg: #000000;
+  --gj-color-button: #fff;
+  /* search buttons */
+  --gj-color-search-button: #101828;
+  --gj-color-search-button-bg: #f8b831;
+  --gj-color-search-button-hover-bg: #0daa5f;
+  /* date, times */
+  --gj-color-date-selected: #fff;
+  --gj-color-date-selected-bg: blue;
+}
+
+/* Add specific dark mode styles for your website elements here */
+/* @media (prefers-color-scheme: dark) {
+  gojo-pwa-widget {
+    --gj-color-primary: #12b76a;
+    --gj-color-pickup-pin: #2e90fa;
+    --gj-color-drop-off-pin: #ff3333;
+    --gj-color-input-placeholder: #98a2b3;
+    --gj-color-widget-bg: #1b1d22;
+    --gj-color-form-control-bg: #24272e;
+    --gj-color-item-hover: #0d884f;
+    --gj-color-tab-bg: #2d3039;
+    --gj-color-vhcType-selected: 
+        rgba(4, 190, 118, 0.04);
+    --gj-color-package-type-selected: #ffa500;
+    --gj-color-item-description: #98a2b3;
+    --gj-color-item-title: #ffffff;
+    --gj-color-text: #ffffff;
+    --gj-color-divide: #24272e;
+    --gj-color-button-disabled: #777;
+    --gj-color-button-hover: #0d884f;
+  }
+} */

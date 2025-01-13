@@ -1,0 +1,260 @@
+{
+  "Home": {
+    "Meta": {
+      "Title": "RydeLimo Premium Limousine Service | Safe and Reliable Asia wide",
+      "Description": "Rydelimo: Your Trusted Private Chauffeur for Safe, Comfortable, and Reliable Travel Across Asia."
+    },
+    "Hero": {
+      "Title1": "First Class chauffeur service",
+      "Title2": "Setting the Standard for Chauffeur Service <highlight>Globally</highlight>.",
+      "Title3": "Exceptional journeys, tailored for you."
+    },
+    "Service": {
+      "Title": "Our Services",
+      "Cards": [
+        {
+          "Title": "Airport Transfers",
+          "Description": "Experience seamless transitions between air and ground travel with our professional chauffeurs who track flights and assist with luggage."
+        },
+        {
+          "Title": "Hourly Hire",
+          "Description": "Enjoy the flexibility of a dedicated chauffeur at your disposal, perfect for business travelers or tourists exploring your destination."
+        },
+        {
+          "Title": "Private Tours",
+          "Description": "Discover your destination through personalized tours led by our knowledgeable chauffeurs, blending iconic landmarks with hidden local gems."
+        },
+        {
+          "Title": "Events/Fleet Management",
+          "Description": "We manage the fleet for any event, from transportation logistics to on-the-ground support, allowing you to focus on your event with complete peace of mind."
+        }
+      ],
+      "LearnMore": "Learn More"
+    },
+    "WhyChooseUs": {
+      "Title": "Why Choose RydeLimo",
+      "WeMeetYouAtTheArrivalHalls": {
+        "Title": "We Meet You at the Arrival Halls",
+        "Description": "After a long flight, the last thing you should worry about is locating your driver. Our highly trained drivers will greet you at the airport and escort you directly from Arrival hall to your vehicle."
+      },
+      "24HoursSupport": {
+        "Title": "24 Hours Support",
+        "Description": "Forget the stress of flight delays or cancellations—our team monitors all flights in real time and is always available to assist with any of your needs."
+      },
+      "UnwaveringCommitmentToSafety": {
+        "Title": "Unwavering Commitment to Safety",
+        "Description": "We prioritise the safety and well-being of our passengers by maintaining the highest quality safety standards of all our Chauffeurs. Our commitment to safety extends to continuous monitoring of driving performance, ensuring that every ride meets our strict safety protocols."
+      },
+      "MultilingualExpertise": {
+        "Title": "Multilingual Expertise",
+        "Description": "Communicate effortlessly with our bilingual contact centre and chauffeurs, offering superior service to international clients and tourists alike."
+      },
+      "UnparalleledHospitality": {
+        "Title": "Unparalleled Hospitality",
+        "Description": "Experience the Courtesy and Distinction of the best Limousine service. With a focus on attention to detail, professionalism, and unparalleled comfort, we ensure that every ride embodies the pinnacle of elegance and customer satisfaction."
+      },
+      "ComfortAndLuxurious": {
+        "Title": "Comfort and Luxurious",
+        "Description": "Each vehicle in our fleet is meticulously maintained, ensuring a spotless interior and exterior for every journey. Our cars feature plush, spacious seating and state-of-the-art amenities to provide maximum comfort, while the smooth ride and tranquil atmosphere allow you to relax or focus as needed."
+      }
+    },
+    "WhoWeAre": {
+      "Title": "Who Are We",
+      "p1": "<b>The core of our business</b> is the power of connection, collaboration, and coordination. We design and manage a unified platform for our Alliance members, ensuring a streamlined and effortless Chauffeur Drive experience for customers across all member companies. By combining fleet, standardizing services, and introducing cross-border connection products, we simplify every step of the journey, making travel smoother and more efficient.",
+      "p2": "<b>On top of this</b>, we leverage many years of our operational expertise honed in Japan, and providing the training program to our Alliance member's chauffeurs to uphold a consistent, reliable standard of service, no matter where our customers go. This program ensures that every customer, from casual travelers to premium clients, receives the same high level of care, safety and recognition worldwide. Through innovative technology and forward-thinking marketing, we are not just keeping pace with global travel needs—we are leading the way, transforming the customer experience across borders."
+    },
+    "HowItWorks": {
+      "Title": "How It Works",
+      "Description": "Using our platform is easy and straightforward. Here's how it works:",
+      "Steps": [
+        {
+          "StepNumber": 1,
+          "Title": "Choose Your Ride",
+          "Description": "Select your city, enter your route details, and pick your preferred vehicle class."
+        },
+        {
+          "StepNumber": 2,
+          "Title": "Confirm Your Booking",
+          "Description": "Provide passenger information, add any special requests, and secure your reservation."
+        },
+        {
+          "StepNumber": 3,
+          "Title": "Meet Your Chauffeur",
+          "Description": "Receive your chauffeur's details 2 hours before pickup. They'll greet you with a personalized sign. Experience first-class transportation in just three simple steps."
+        }
+      ]
+    },
+    "TrustedExcellence": {
+      "Title": "Trusted Excellence",
+      "AwardInfo": "Proud recipient of the TripAdvisor Travelers' Choice Award in 2023 and 2024.",
+      "FeedbackInfo": "Choose RydeLimo for a transportation experience trusted by travelers worldwide.",
+      "Feedbacks": [
+        {
+          "Author": "Haruka T., Tokyo",
+          "Text": "Impeccable service from start to finish. RydeLimo made our trip to Singapore truly memorable."
+        },
+        {
+          "Author": "Michael L., Singapore",
+          "Text": "Professional, punctual, and courteous. The best chauffeur service I've experienced in Tokyo."
+        }
+      ]
+    },
+    "BrandPushTrustBadge": {
+      "AS_SEEN_ON": "AS SEEN ON"
+    },
+    "Footer": "Footer"
+  },
+  "Navbar": {
+    "AirportTransfer": "Airport Transfer",
+    "CarServices": "Car Services",
+    "Reservation": "Reservation",
+    "Fleet": "Fleet",
+    "News": "News"
+  },
+  "Navigation": {
+    "ourServices": {
+      "trigger": "Our Services",
+      "airportTransfers": {
+        "Title": "Airport Transfers",
+        "Description": "Seamless transportation from airport to your destination with professional chauffeurs."
+      },
+      "hourlyCharters": {
+        "Title": "Hourly Charters",
+        "Description": "Flexible chauffeur service available by the hour, tailored to your needs."
+      },
+      "privateTours": {
+        "Title": "Private Tours",
+        "Description": "Personalized tours with expert drivers, showing iconic and hidden gems."
+      }
+    },
+    "forBusiness": {
+      "trigger": "For Business",
+      "corporations": {
+        "Title": "Corporations",
+        "Description": "Premium transportation solutions tailored for corporate clients."
+      },
+      "eventsFleetManagement": {
+        "Title": "Events/Fleet Management",
+        "Description": "Reliable and professional transportation solutions for events and fleet management."
+      },
+      "strategicPartners": {
+        "Title": "Strategic Partners",
+        "Description": "Partnering to deliver exceptional transportation services for growing demands."
+      },
+      "travelAgencies": {
+        "Title": "Travel Agencies",
+        "Description": "Reliable and customizable travel options for agency clients."
+      }
+    },
+    "aboutUs": {
+      "Title": "About Us"
+    },
+    "partnerships": {
+      "Title": "Partnerships"
+    },
+    "blog": {
+      "Title": "Blog"
+    }
+  },
+  "MobileBookingButton": {
+    "Title": "Book Now",
+    "Subtitle": "First class service in first class vehicles."
+  },
+  "Footer": {
+    "AirportTransfer": "Airport Transfer",
+    "CarServices": "Car Services",
+    "Reservation": "Reservation",
+    "Fleet": "Fleet",
+    "ContactEmail": "Contact Us",
+    "Contact": "Contact",
+    "TypeEmail": "Type your email",
+    "explore": "Explore RydeLimo",
+    "RightsReserved": "2024 RydeLimo Corporation All rights reserved",
+    "TermsConditions": "Terms & Conditions"
+  },
+
+  "BookingForm": {
+    "ThankYou": {
+      "Title": "Thank you",
+      "Subtitle": "We will be in touch soon to confirm your booking."
+    },
+    "Form": {
+      "Tokyo": "Tokyo",
+      "Singapore": "Singapore",
+      "From": "From",
+      "To": "To",
+      "Date": "Date",
+      "PickDate": "Pick a date",
+      "Time": "Time",
+      "Continue": "Continue",
+      "FullName": "Full Name",
+      "EmailAddress": "Email Address",
+      "Phone": "Phone Number",
+      "Message": "Message",
+      "Submit": "Book Now",
+      "ContactUs": "Contact Us",
+      "LocationPlaceholder": "Enter a Place, Location",
+      "Send": "Send",
+      "GetInTouch": "Get in Touch with Us",
+      "TellMeMore": "Tell me more",
+      "WorkWithUs": "Work with us",
+      "ThankYou": "Thank you!",
+      "ThankYouMessage": "We have received your request and will get back to you as soon as possible."
+    }
+  },
+  "Sections": {
+    "Application": {
+      "Application": "Application",
+      "Title": "Get the RydeLimo App",
+      "Description": "With the RydeLimo app, booking luxury rides, managing reservations, and tracking your chauffeur are just a few taps away. Experience premium transportation with convenience and ease, all in one secure platform."
+    }
+  },
+  "AboutUs": {
+    "Meta": {
+      "Title": "About RydeLimo | Professional Chauffeur & Transportation Services",
+      "Description": "RydeLimo is committed to delivering premium transportation services tailored to meet each client’s needs. From airport transfers and hourly hire to private tours and event fleet management, our team of professional chauffeurs ensures a seamless, comfortable travel experience. Discover how RydeLimo can enhance your journey with reliable, client-focused service."
+    },
+    "PageTitle": "About Us",
+    "Text1": "Rydelimo, established by the owner of Tokyo MK—Japan's premier taxi and limousine service—continues the legacy of safety, excellence and luxury. Tokyo MK has built a strong reputation for delivering top-tier transportation services, featuring a fleet of Rolls Royce, Maybach, Mercedes-Benz, BMW, Lexus, and Alphard vehicles, all operated by well-trained chauffeurs. Catering to the discerning needs of clients, the company offers seamless airport transfers and exclusive limousine charters, tours, private chauffeured service for conferences, events, and exhibitions. Foreign-speaking drivers are also available in all the cities we operate in, ensuring a smooth and comfortable experience for all our clients.",
+    "Text2": "Through Rydelimo, this unmatched level of service, distinguished by its unwavering commitment to safety, comfort, and professionalism, is now accessible globally. Thanks to our partnership with world-class affiliates, we uphold the meticulous standards and meticulous attention to procedures and details that are the hallmark of Japanese excellence.",
+    "PromisedStandards": {
+      "Header": "Our Promised Standards",
+      "Text1": "At the core of our business is the power of connection, collaboration, and coordination. We design and manage the solutions that unify the Alliance, ensuring a streamlined and effortless Chauffeur Drive experience for customers across all member companies.",
+      "Text2": "By co-locating like-minded service-based partners, standardizing safety and customer service standards, and introducing cross-border connection products, we simplify every step of the journey. Our initiatives also focus on identifying premium customers, guaranteeing they receive consistent recognition and care worldwide. Through innovative technology and forward-thinking marketing, we continue to elevate and transform the global travel experience."
+    },
+    "USP": {
+      "SafeDrivingTechniques": "Safe Driving Techniques",
+      "Hospitality": "Hospitality",
+      "SmartDressCode": "Smart Dress Code",
+      "CleanCar": "Clean Car",
+      "Bilingual": "Bilingual",
+      "FocusOnSafetyPrograms": "Focus on Safety Programs"
+    }
+  },
+  "Partnerships": {
+    "Meta": {
+      "Title": "Partner with RydeLimo | Grow Your Chauffeur Business & Network",
+      "Description": "Expand your business with RydeLimo’s global partnership opportunities. Join our network as a limousine company or independent chauffeur, accessing a global customer base and benefiting from comprehensive training that ensures high service standards. Together, we enhance service quality, share revenue opportunities, and provide customers with exceptional care worldwide."
+    },
+    "PageTitle": "Partnerships",
+    "GrowBusinessTitle": "Grow your business revenue with us",
+    "GrowBusinessText1": "Looking to expand your business internationally? We provide the perfect opportunity to maintain your service standards while ensuring your customers receive exceptional care, no matter where they travel. Rest easy knowing that our comprehensive training programs are designed to support your growth and deliver peace of mind to our customers, allowing you to get more business.",
+    "LimousineTitle": "Limousine & Chauffeur Drive Companies",
+    "LimousineText1": "Join our Alliance, where we share our customer network exclusively with partners who have met our stringent training standards for drivers. This initiative addresses the anxiety many of us feel when entrusting our customers to unfamiliar partners, which can risk tarnishing our hard-earned reputations. Through this Alliance.",
+    "LimousineText2": "We are establishing consistent standards, allowing us to confidently share and expand our business networks and revenue streams while maintaining the high-quality service our clients expect. Together, we can grow stronger and more reliable, ensuring peace of mind for both our customers and ourselves.",
+    "DriversTitle": "Drivers",
+    "DriversText1": "Driving as an independent chauffeur? No worries, we welcome you to join our ranks. We offer comprehensive training for those eager to improve. Once you meet our high standards for safe driving, customer service, and vehicle maintenance, you'll gain access to customers from all around the globe.",
+    "DriversText2": "Multi-lingual chauffeurs are highly valued, and we have plenty of opportunities that can help increase your income. Stand out from the crowd and let us help you succeed. Together, we can ensure that both you and our clients benefit from exceptional service and experience."
+  },
+  "Blog": {
+    "Meta": {
+      "Title": "RydeLimo Blog | Insights and Inspiration for Your Journey",
+      "Description": "RydeLimo Blog |  Explore expert tips, travel stories, and the latest updates in luxury transportation and premium travel services across Asia."
+    },
+    "Blog": "Blog",
+    "Header": "Insights and Inspiration for Your Journey",
+    "Subheader": "Explore expert tips, travel stories, and the latest updates in luxury transportation and premium travel services across Asia.",
+    "ViewAll": "View All",
+    "CategorySubheader": "Stay informed with the latest in {category_name}."
+  }
+}
