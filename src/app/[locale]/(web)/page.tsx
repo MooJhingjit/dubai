@@ -15,12 +15,12 @@ export async function generateMetadata({ params }: {
   }>;
 }) {
   const { locale } = await params;
-  const t = await getTranslations("Home.Meta");
+  const t = await getTranslations("home.meta");
   const links = generateHreflang(availableLanguages, "/");
 
   return {
-    title: t("Title"),
-    description: t("Description"),
+    title: t("title"),
+    description: t("description"),
     alternates: {
       canonical: links[locale as typeof availableLanguages[number]],
       languages: links

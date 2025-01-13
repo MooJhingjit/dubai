@@ -1,6 +1,8 @@
+import { useTranslations } from "next-intl";
 import React from "react";
 
 const Hero = () => {
+  const t = useTranslations("home.hero");
   return (
     <div className="w-full h-[calc(100vh-80px)] relative">
       <div
@@ -34,7 +36,7 @@ const Hero = () => {
               lineHeight: "1.5"
             }}
           >
-            The Ultimate Guide to Investing in Dubai Real Estate
+            {t("title")}
           </h1>
           {/* Subheading */}
           <p
@@ -43,12 +45,11 @@ const Hero = () => {
               lineHeight: "1.4"
             }}
           >
-            Destination Dubai by Knight Frank delivers exclusive insights into
-            Dubai&apos;s most profitable real estate hotspots.
+            {t("subtitle")}
           </p>
           {/* Call to Action Button */}
           <button className="font-suisse bg-[#FFB944] sm:text-xl text-[#0D1B2A]   pb-1.5 pt-2 rounded-full shadow-md px-8 md:px-20 w-full md:w-auto">
-            See Latest Market Trends
+            {t("cta")}
           </button>
         </div>
       </div>

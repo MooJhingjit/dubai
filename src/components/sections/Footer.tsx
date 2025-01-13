@@ -1,49 +1,55 @@
 import React from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 const Footer = () => {
+  const t = useTranslations("footer");
+
   return (
     <footer className="font-poppins bg-[#D1D5D7] text-[#004170] pb-4 pt-10 md:pt-28">
       <div className="grid max-w-md grid-cols-1 gap-4 px-4 mx-auto sm:max-w-7xl sm:px-6 lg:px-8 xl:px-0 sm:grid-cols-2 lg:grid-cols-6 xl:grid-cols-10 gap-y-10 xl:gap-y-0 xl:gap-20">
         {/* About Section */}
         <div className="text-xl ">
-          <h3 className="mb-5 font-bold">About</h3>
-          <h3 className="mb-5 font-bold">Contact</h3>
-          <h3 className="mb-5 font-bold">People</h3>
+          <h3 className="mb-5 font-bold">{t("about")}</h3>
+          <h3 className="mb-5 font-bold">{t("contact")}</h3>
+          <h3 className="mb-5 font-bold">{t("people")}</h3>
         </div>
 
         {/* Areas Section */}
         <div className="lg:col-span-6 xl:pl-10 xl:col-span-4">
-          <h3 className="mb-4 text-xl font-bold">Areas</h3>
+          <h3 className="mb-4 text-xl font-bold">{t("areas.title")}</h3>
           <ul className="grid grid-cols-2 gap-4 text-xl">
             <li className="mb-2 cursor-pointer hover:underline">
-              Palm Jumeirah
+              {t("areas.palmJumeirah")}
             </li>
             <li className="mb-2 cursor-pointer hover:underline">
-              Dubai Island
-            </li>
-
-            <li className="mb-2 cursor-pointer hover:underline">
-              Dubai Hills Estate
+              {t("areas.dubaiIsland")}
             </li>
             <li className="mb-2 cursor-pointer hover:underline">
-              Jumeirah Bay Island
+              {t("areas.dubaiHillsEstate")}
             </li>
             <li className="mb-2 cursor-pointer hover:underline">
-              Emirates Hill{" "}
+              {t("areas.jumeirahBayIsland")}
             </li>
-            <li className="cursor-pointer hover:underline">Downtown Dubai </li>
+            <li className="mb-2 cursor-pointer hover:underline">
+              {t("areas.emiratesHill")}
+            </li>
+            <li className="cursor-pointer hover:underline">
+              {t("areas.downtownDubai")}
+            </li>
           </ul>
         </div>
 
         {/* Properties Section */}
         <div className="lg:col-span-3 xl:col-span-4">
-          <h3 className="mb-4 text-xl font-bold">Properties</h3>
+          <h3 className="mb-4 text-xl font-bold">{t("properties.title")}</h3>
           <ul className="grid gap-4 text-xl">
             <li className="mb-2 cursor-pointer hover:underline">
-              Terms & conditions
+              {t("properties.terms")}
             </li>
-            <li className="cursor-pointer hover:underline">Privacy policy</li>
+            <li className="cursor-pointer hover:underline">
+              {t("properties.privacy")}
+            </li>
           </ul>
         </div>
 

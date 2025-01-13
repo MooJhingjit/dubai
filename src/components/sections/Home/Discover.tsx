@@ -1,6 +1,8 @@
+import { useTranslations } from "next-intl";
 import React from "react";
 
 const Discover = () => {
+  const t = useTranslations("home.discover");
   return (
     <div className="w-full ">
       <div className="max-w-md sm:max-w-7xl flex  relative justify-end  mx-auto bg-[#004170]/80 ">
@@ -23,17 +25,14 @@ const Discover = () => {
               lineHeight: "1.5"
             }}
           >
-            Discover Dubai’s Best Luxury Investment Opportunities
+            {t("title")}
           </h2>
           <p className="font-suisse text-lg sm:text-xl mb-8 text-center md:text-right text-[#FFB944]  md:max-w-[600px]  md:ml-auto ">
-            {` With over a century of trust from real estate investors, Knight
-          Frank’s expert analysts deliver exclusive insights into 
-          Dubai’s next big investment opportunities.
-          `}
+            {t("subtitle")}
           </p>
 
           <button className="font-suisse bg-[#009BDC] text-xl  text-[#F7F9FC] py-2.5 px-14 rounded-full shadow-md">
-            Get Instant Access
+            {t("cta")}
           </button>
         </div>
       </div>
