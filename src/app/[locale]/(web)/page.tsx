@@ -9,8 +9,12 @@ import Team from "@/components/sections/Home/Team";
 import ContactForm from "@/components/modules/ContactForm";
 
 export async function generateMetadata({ params }: {
-  params: { locale: string }
+  params: Promise<{
+    locale: string;
+    slug: string[];
+  }>;
 }) {
+  const { locale } = await params;
   const t = await getTranslations("Home.Meta");
   const links = generateHreflang(availableLanguages, "/");
 
@@ -18,7 +22,7 @@ export async function generateMetadata({ params }: {
     title: t("Title"),
     description: t("Description"),
     alternates: {
-      canonical: links[params.locale as typeof availableLanguages[number]],
+      canonical: links[locale as typeof availableLanguages[number]],
       languages: links
     },
   };
