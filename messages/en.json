@@ -69,5 +69,29 @@
     "about": "About",
     "people": "People",
     "contact": "Contact Us"
+  },
+  "aboutUs": {
+    "hero": {
+      "backgroundImage": "/dubai/about/hero.png"
+    },
+    "about": {
+      "title": "About Knight Frank MENA",
+      "videoSrc": "https://www.youtube.com/embed/99gKrGqj2CA?si=OvoGScw25w3DMuiG",
+      "videoTitle": "YouTube video player"
+    },
+    "ourMission": {
+      "imageSrc": "/dubai/about/our-mission.png",
+      "imageAlt": "About Knight Frank MENA",
+      "title": "Our Mission",
+      "description": "To consistently deliver value and exceed expectations. Our guiding principle is always to put our clients' interests first, and we continually strive to redefine the standard of excellence in global property consultancy."
+    },
+    "partner": {
+      "title": "Your trusted partner",
+      "description1": "At Knight Frank, we don't just offer property solutions, we engineer transformative and dynamic property strategies that amplify value and inspire growth across all property sectors and services.",
+      "description2": "Our expertise traverses the breadth of established markets and ventures boldly into the promise of emerging sectors. We are not just dedicated, but passionately invested in surpassing your property objectives. Our mission is to transform your property dreams into tangible, successful realities.",
+      "cta": "Contact us",
+      "imageSrc": "/dubai/about/partner.png",
+      "imageAlt": "About Knight Frank MENA"
+    }
   }
 }
