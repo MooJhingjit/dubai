@@ -20,7 +20,7 @@ const ContactInformation = () => {
 
       {/* contact card */}
       <div className="px-4 mx-auto sm:max-w-7xl md:px-8 xl:px-0 relative">
-        <div className="flex flex-wrap bg-white p-6 rounded-lg">
+        <div className="flex flex-wrap lg:flex-nowrap bg-white p-6 rounded-lg">
           {/* contact information */}
           <div className="bg-[#01416F] basis-full lg:basis-1/3 rounded-lg relative">
             <div className="px-10 py-12 text-white flex flex-col h-full">

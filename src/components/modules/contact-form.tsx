@@ -1,3 +1,4 @@
+"use client"
 import { cn } from "@/lib/utils";
 import React from "react";
 
@@ -35,6 +36,39 @@ const ContactForm = (props: Props) => {
     translations
   } = props;
 
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    const data = {
+      firstName: formData.get("firstName"),
+      lastName: formData.get("lastName"),
+      phone: formData.get("phone"),
+      email: formData.get("email"),
+      message: formData.get("message"),
+    };
+
+    try {
+    console.log("🚀 ~ handleSubmit ~ data:", data)
+
+      // const response = await fetch("https://www.api.com", {
+      //   method: "POST",
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //   },
+      //   body: JSON.stringify(data),
+      // });
+
+      // if (!response.ok) {
+      //   throw new Error("Network response was not ok");
+      // }
+
+      // const result = await response.json();
+      // console.log("Success:", result);
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  };
+
   return (
     <div
       className={cn(
@@ -42,12 +76,13 @@ const ContactForm = (props: Props) => {
         formWrapperClassName
       )}
     >
-      <form className="">
+      <form className="" onSubmit={handleSubmit}>
         <div className="grid grid-cols-1 gap-6 mb-6 sm:grid-cols-2">
           <div>
             <label className="block mb-3 font-medium text-left">{translations.nameLabel}</label>
             <input
               type="text"
+              name="firstName"
               placeholder={translations.namePlaceholder}
               className="w-full border-gray-400 rounded-sm h-[52px] px-4 shadow-sm focus:ring-black focus:border-black border text-sm"
             />
@@ -58,6 +93,7 @@ const ContactForm = (props: Props) => {
             </label>
             <input
               type="text"
+              name="lastName"
               placeholder={translations.lastNamePlaceholder}
               className="w-full border-gray-400 rounded-sm h-[52px] px-4 shadow-sm focus:ring-black focus:border-black border text-sm"
             />
@@ -68,6 +104,7 @@ const ContactForm = (props: Props) => {
             </label>
             <input
               type="text"
+              name="phone"
               placeholder={translations.phonePlaceholder}
               className="w-full border-gray-400 rounded-sm h-[52px] px-4 shadow-sm focus:ring-black focus:border-black border text-sm"
             />
@@ -79,6 +116,7 @@ const ContactForm = (props: Props) => {
             </label>
             <input
               type="text"
+              name="email"
               placeholder={translations.emailPlaceholder}
               className="w-full border-gray-400 rounded-sm h-[52px] px-4 shadow-sm focus:ring-black focus:border-black border text-sm"
             />
@@ -89,6 +127,7 @@ const ContactForm = (props: Props) => {
                 {translations.messageLabel}
               </label>
               <textarea
+                name="message"
                 placeholder={translations.messagePlaceholder}
                 rows={5}
                 className="w-full p-4 text-sm border border-gray-400 rounded-sm shadow-sm focus:ring-black focus:border-black"
