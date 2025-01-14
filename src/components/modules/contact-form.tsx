@@ -9,6 +9,23 @@ type Props = {
   formWrapperClassName?: string;
   btnText?: string;
   display?: "inline" | "block";
+  translations: {
+    nameLabel: string;
+    namePlaceholder: string;
+    lastNameLabel: string;
+    lastNamePlaceholder: string;
+    phoneLabel: string;
+    phonePlaceholder: string;
+    emailLabel: string;
+    emailOptional: string;
+    emailPlaceholder: string;
+    messageLabel: string;
+    messagePlaceholder: string;
+    termsText: string;
+    termsLink: string;
+    and: string;
+    privacyLink: string;
+  };
 };
 const ContactForm = (props: Props) => {
   const {
@@ -18,10 +35,12 @@ const ContactForm = (props: Props) => {
     className,
     formWrapperClassName,
     btnText = "Submit",
-    display = "inline"
+    display = "inline",
+    translations
   } = props;
+
   return (
-    <div className={cn("w-full py-8 pb-16 text-white md:pt-4", className)}>
+    <div className={cn("w-full  text-white", className)}>
       <div className="max-w-md px-4 mx-auto text-center sm:max-w-7xl md:px-8 xl:px-0">
         {!!title && (
           <h2 className="mb-8 text-3xl font-normal text-white font-romain sm:text-5xl">
@@ -42,51 +61,51 @@ const ContactForm = (props: Props) => {
           <form className="">
             <div className="grid grid-cols-1 gap-6 mb-6 sm:grid-cols-2">
               <div>
-                <label className="block mb-3 font-medium text-left">Name</label>
+                <label className="block mb-3 font-medium text-left">{translations.nameLabel}</label>
                 <input
                   type="text"
-                  placeholder="Enter First Name"
+                  placeholder={translations.namePlaceholder}
                   className="w-full border-gray-400 rounded-sm h-[52px] px-4 shadow-sm focus:ring-black focus:border-black border text-sm"
                 />
               </div>
               <div>
                 <label className="block mb-3 font-medium text-left">
-                  Last Name
+                  {translations.lastNameLabel}
                 </label>
                 <input
                   type="text"
-                  placeholder="Enter Last Name"
+                  placeholder={translations.lastNamePlaceholder}
                   className="w-full border-gray-400 rounded-sm h-[52px] px-4 shadow-sm focus:ring-black focus:border-black border text-sm"
                 />
               </div>
               <div>
                 <label className="block mb-3 font-medium text-left">
-                  Phone
+                  {translations.phoneLabel}
                 </label>
                 <input
                   type="text"
-                  placeholder="Enter Phone Number"
+                  placeholder={translations.phonePlaceholder}
                   className="w-full border-gray-400 rounded-sm h-[52px] px-4 shadow-sm focus:ring-black focus:border-black border text-sm"
                 />
               </div>
               <div>
                 <label className="block mb-3 font-medium text-left">
-                  Email{" "}
-                  <span className="font-normal text-gray-600">[optional]</span>
+                  {translations.emailLabel}{" "}
+                  <span className="font-normal text-gray-600">{translations.emailOptional}</span>
                 </label>
                 <input
                   type="text"
-                  placeholder="Enter Email"
+                  placeholder={translations.emailPlaceholder}
                   className="w-full border-gray-400 rounded-sm h-[52px] px-4 shadow-sm focus:ring-black focus:border-black border text-sm"
                 />
               </div>
               {!isHideMessage && (
                 <div className="col-span-2">
                   <label className="block mb-3 font-medium text-left">
-                    How can we help you?
+                    {translations.messageLabel}
                   </label>
                   <textarea
-                    placeholder="Enter your Message here."
+                    placeholder={translations.messagePlaceholder}
                     rows={5}
                     className="w-full p-4 text-sm border border-gray-400 rounded-sm shadow-sm focus:ring-black focus:border-black"
                   />
@@ -104,19 +123,19 @@ const ContactForm = (props: Props) => {
                   htmlFor="terms"
                   className="font-suisse  ml-2  text-[#009BDC] text-sm sm:text-base"
                 >
-                  I agree with{" "}
+                  {translations.termsText}{" "}
                   <a
                     href="#"
                     className="underline "
                   >
-                    Terms of Use
+                    {translations.termsLink}
                   </a>{" "}
-                  and{" "}
+                  {translations.and}{" "}
                   <a
                     href="#"
                     className="underline "
                   >
-                    Privacy Policy
+                    {translations.privacyLink}
                   </a>
                 </label>
               </div>

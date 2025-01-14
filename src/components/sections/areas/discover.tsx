@@ -1,5 +1,5 @@
 import React from "react";
-import ContactForm from "../../modules/contact-form";
+// import ContactForm from "../../modules/contact-form";
 
 const Discover = () => {
   return (
@@ -23,7 +23,7 @@ const Discover = () => {
           </h2>
         </div>
       </div>
-      <ContactForm className="!pt-0" btnText="Download your free report" />
+      {/* <ContactForm className="!pt-0" btnText="Download your free report" /> */}
     </div>
   );
 };
