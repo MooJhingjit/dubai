@@ -12,6 +12,7 @@ type AreaContent = {
 
 const areas: {
   [key: string]: {
+    locationId: number;
     image: string;
     name: string;
     slug: string;
@@ -19,6 +20,7 @@ const areas: {
   };
 } = {
   "palm-jumeirah": {
+    locationId: 1,
     image: "/dubai/areas/palm-jumeirah.jpg",
     name: "Palm Jumeirah",
     slug: "palm-jumeirah",
@@ -33,6 +35,7 @@ const areas: {
     }
   },
   "dubai-hills-estate": {
+    locationId: 2,
     image: "/dubai/areas/dubai-hills-estate.jpg",
     name: "Dubai Hills Estate",
     slug: "dubai-hills-estate",
@@ -47,6 +50,7 @@ const areas: {
     }
   },
   "emirates-hills": {
+    locationId: 3,
     image: "/dubai/areas/emirates-hills.jpg",
     name: "Emirates Hills",
     slug: "emirates-hills",
@@ -61,6 +65,7 @@ const areas: {
     }
   },
   "jumeirah-bay-islands": {
+    locationId: 4,
     image: "/dubai/areas/jumeirah-bay-islands.jpg",
     name: "Jumeirah Bay Islands",
     slug: "jumeirah-bay-islands",
@@ -75,6 +80,7 @@ const areas: {
     }
   },
   "dubai-islands": {
+    locationId: 5,
     image: "/dubai/areas/dubai-islands.jpg",
     name: "Dubai Islands",
     slug: "dubai-islands",
@@ -89,6 +95,7 @@ const areas: {
     }
   },
   "dubai-downtown": {
+    locationId: 6,
     image: "/dubai/areas/dubai-downtown.jpg",
     name: "Downtown Dubai",
     slug: "dubai-downtown",
@@ -105,6 +112,7 @@ const areas: {
 };
 
 export const topAreas = Object.keys(areas).map((area) => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { content, ...rest } = areas[area as keyof typeof areas];
   return rest;
 });

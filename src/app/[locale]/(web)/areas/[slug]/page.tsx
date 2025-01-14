@@ -7,17 +7,16 @@ import React from "react";
 import { getContent } from "../area-data";
 
 type ContentPageProps = {
-  readonly params: {
+  readonly params: Promise<{
     locale: typeof availableLanguages[number];
     slug: string[];
-  };
+  }
+    >
 };
 
-export async function generateMetadata({
-  params,
-}: ContentPageProps): Promise<Metadata> {
-  const contentSlug = params.slug[0];
-  const locale = params.locale
+export async function generateMetadata({params}: ContentPageProps): Promise<Metadata> {
+  const { slug, locale } = await params;
+  const contentSlug = slug[0];
   const pageContent = getContent(contentSlug, locale);
 
   if (!pageContent) return notFound(); 
@@ -28,15 +27,16 @@ export async function generateMetadata({
     title: meta.title,
     description: meta.description,
     alternates: {
-      canonical: links[params.locale as typeof availableLanguages[number]],
+      canonical: links[locale as typeof availableLanguages[number]],
       languages: links
     },
   };
 }
 
-export default function AreasPage({ params }: ContentPageProps) {
-  const contentSlug = params.slug[0];
-  const locale = params.locale
+export default async function AreasPage({params}: ContentPageProps) {
+
+  const { slug, locale } = await params
+  const contentSlug = slug[0];
   const pageContent = getContent(contentSlug, locale);
 
   if (!pageContent) {
