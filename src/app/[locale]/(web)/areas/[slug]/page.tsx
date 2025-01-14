@@ -1,31 +1,32 @@
 
 import { availableLanguages } from "@/lib/config";
 import { generateHreflang } from "@/lib/utils";
-import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import React from "react";
-import { getContent } from "../area-data";
+import { getTranslations } from "next-intl/server";
 
-type ContentPageProps = {
-  readonly params: Promise<{
-    locale: typeof availableLanguages[number];
-    slug: string[];
+export async function generateMetadata({ params }: {
+  params: Promise<{
+    locale: string;
+    slug: string;
+  }>;
+}) {
+  const { locale, slug } = await params;
+    const pageSlug = slug;
+
+  const t = await getTranslations("area.pages." + pageSlug);
+  console.log("🚀 ~ t:", t.has("meta"))
+
+  if (!t.has("meta")) {
+    return notFound();
   }
-    >
-};
 
-export async function generateMetadata({params}: ContentPageProps): Promise<Metadata> {
-  const { slug, locale } = await params;
-  const contentSlug = slug[0];
-  const pageContent = getContent(contentSlug, locale);
 
-  if (!pageContent) return notFound(); 
-  
-  const links = generateHreflang(availableLanguages, "/" + contentSlug); 
-  const { meta } = pageContent;
+  const links = generateHreflang(availableLanguages, "/areas");
+
   return {
-    title: meta.title,
-    description: meta.description,
+    title: t("meta.title"),
+    description: t("meta.description"),
     alternates: {
       canonical: links[locale as typeof availableLanguages[number]],
       languages: links
@@ -33,18 +34,27 @@ export async function generateMetadata({params}: ContentPageProps): Promise<Meta
   };
 }
 
-export default async function AreasPage({params}: ContentPageProps) {
 
-  const { slug, locale } = await params
-  const contentSlug = slug[0];
-  const pageContent = getContent(contentSlug, locale);
 
-  if (!pageContent) {
+export default async function AreasPage({params}: {
+  readonly params: Promise<{
+    locale: typeof availableLanguages[number];
+    slug: string;
+  }
+    >
+}) {
+
+  const { slug } = await params
+  const pageSlug = slug;
+  const t = await getTranslations("area.pages." + pageSlug);
+
+  if (!t.has("meta")) {
     return notFound();
   }
 
   return (
     <>
+    <p>hello</p>
       {/* <ContentHero
         useBookingWidget={
           !["fleet-management", "business", "strategic-partners", "travel-agencies"].includes(contentSlug)

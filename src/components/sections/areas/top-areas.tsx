@@ -1,19 +1,12 @@
 import Link from "next/link";
 import React from "react";
 import CardAreaGrid from "../../modules/cards/card-area-grid";
+import { useMessages, useTranslations } from "next-intl";
 
-type TopAreaProps = {
-  image: string;
-  name: string;
-  slug: string;
-};
-
-type Props = {
-  topAreas: TopAreaProps[];
-};
-const TopAreas = (props: Props) => {
-  const { topAreas } = props;
-
+const TopAreas = () => {
+  const t = useTranslations('area.pages');
+  const messages = useMessages();
+  const keys = typeof messages.area === 'object' ? Object.keys(messages.area.pages) : []
   return (
     <div className="w-full py-10 text-white bg-white md:pt-12">
       <div className="max-w-md px-4 mx-auto text-center sm:max-w-7xl md:px-8 xl:px-0">
@@ -22,14 +15,14 @@ const TopAreas = (props: Props) => {
         </h2>
 
         <div className="grid gap-x-5 gap-y-10 gird-cols-1 sm:grid-cols-3">
-          {topAreas.map((topArea) => (
+          {keys.map((area) => (
             <Link
-              key={topArea.name}
-              href={`/dubai/areas/${topArea.slug}`}
+              key={area}
+              href={`/dubai/areas/${t(`${area}.slug`)}`}
             >
               <CardAreaGrid
-                image={topArea.image}
-                name={topArea.name}
+                image={t(`${area}.image`)}
+                name={t(`${area}.name`)}
                 title="Exclusive investment properties in"
               />
             </Link>

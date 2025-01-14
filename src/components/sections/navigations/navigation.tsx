@@ -46,7 +46,7 @@ const Navigation = () => {
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link href="/about" legacyBehavior passHref>
+            <Link href="/about-us" legacyBehavior passHref>
               <NavigationMenuLink>{t("about")}</NavigationMenuLink>
             </Link>
           </NavigationMenuItem>

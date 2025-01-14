@@ -93,5 +93,73 @@
       "imageSrc": "/dubai/about/partner.png",
       "imageAlt": "About Knight Frank MENA"
     }
+  },
+  "area": {
+    "meta": {
+      "title": "Dubai's top areas for real estate investment | Knight Frank",
+      "description": "Discover Dubai's most profitable real estate investment opportunities with Knight Frank's expert analysts. Access exclusive insights into Dubai's luxury property market."
+    },
+    "pages": {
+      "palm-jumeirah": {
+        "meta": {
+          "title": "Palm Jumeirah",
+          "description": "Palm J"
+        },
+        "locationId": 1,
+        "image": "/dubai/areas/palm-jumeirah.jpg",
+        "name": "Palm Jumeirah",
+        "slug": "palm-jumeirah"
+      },
+      "dubai-hills-estate": {
+        "meta": {
+          "title": "Palm Jumeirah",
+          "description": "Palm J"
+        },
+        "locationId": 2,
+        "image": "/dubai/areas/dubai-hills-estate.jpg",
+        "name": "Dubai Hills Estate",
+        "slug": "dubai-hills-estate"
+      },
+      "emirates-hills": {
+        "meta": {
+          "title": "Palm Jumeirah",
+          "description": "Palm J"
+        },
+        "locationId": 3,
+        "image": "/dubai/areas/emirates-hills.jpg",
+        "name": "Emirates Hills",
+        "slug": "emirates-hills"
+      },
+      "jumeirah-bay-islands": {
+        "meta": {
+          "title": "Palm Jumeirah",
+          "description": "Palm J"
+        },
+        "locationId": 4,
+        "image": "/dubai/areas/jumeirah-bay-islands.jpg",
+        "name": "Jumeirah Bay Islands",
+        "slug": "jumeirah-bay-islands"
+      },
+      "dubai-islands": {
+        "meta": {
+          "title": "Palm Jumeirah",
+          "description": "Palm J"
+        },
+        "locationId": 5,
+        "image": "/dubai/areas/dubai-islands.jpg",
+        "name": "Dubai Islands",
+        "slug": "dubai-islands"
+      },
+      "dubai-downtown": {
+        "meta": {
+          "title": "Palm Jumeirah",
+          "description": "Palm J"
+        },
+        "locationId": 6,
+        "image": "/dubai/areas/dubai-downtown.jpg",
+        "name": "Downtown Dubai",
+        "slug": "dubai-downtown"
+      }
+    }
   }
 }
