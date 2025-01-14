@@ -6,7 +6,7 @@ import Hero from "@/components/sections/home/hero";
 import Discover from "@/components/sections/home/discover";
 import Investment from "@/components/sections/home/investment";
 import Team from "@/components/sections/home/team";
-import ContactForm from "@/components/modules/contact-form";
+import Contact from "@/components/sections/home/contact";
 
 export async function generateMetadata({ params }: {
   params: Promise<{
@@ -35,11 +35,7 @@ export default function HomePage() {
       <Discover />
       <Investment />
       <Team />
-      <ContactForm
-        title="Access The Latest Dubai Market Updates"
-        subTitle="Get exclusive real estate investment opportunities before they hit the
-          market."
-      />
+      <Contact />
     </>
   );
 }

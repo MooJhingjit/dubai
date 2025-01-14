@@ -3,6 +3,7 @@ import Hero from "@/components/sections/areas/hero";
 import Discover from "@/components/sections/areas/discover";
 import TopAreas from "@/components/sections/areas/top-areas";
 import { topAreas } from "./area-data";
+import Contact from "@/components/sections/areas/contact";
 
 
 const page = () => {
@@ -10,6 +11,7 @@ const page = () => {
     <>
       <Hero />
       <Discover />
+      <Contact />
       <TopAreas topAreas={topAreas} />
     </>
   );
