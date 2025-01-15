@@ -12,6 +12,7 @@ export default async function RootLayout({
 }>) {
   const { locale } = await params;
 
+  
   return (
     <html lang={locale}>
       <head>
