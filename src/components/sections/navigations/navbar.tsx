@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from 'react'
 import Image from 'next/image'
 import Navigation from "./navigation";
+import MobileNavigation from "./mobile-navation";
 
 const Navbar = () => {
   return (
@@ -27,20 +28,7 @@ const Navbar = () => {
 
             <div className="flex space-x-3">
               <div className="lg:hidden">
-                {/* <MobileNavigation
-                  translations={{
-                    areas: {
-                      Title: "Areas",
-                    },
-                    properties: {
-                      Title: "Properties",
-                    },
-                    about: {
-                      Title: "About",
-                    },
-
-                  }}
-                /> */}
+                <MobileNavigation />
               </div>
 
               <div className="hidden lg:flex ">

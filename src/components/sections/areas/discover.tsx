@@ -18,7 +18,7 @@ const Discover = () => {
 
         {/* Text Content Section */}
         <div className="relative flex items-center z-30 px-4 py-8 text-center md:w-2/3 md:text-right lg:py-16 sm:px-6 lg:px-8 xl:px-0">
-          <h2 className="mb-5 text-3xl font-romain sm:text-4xl text-[#FFB944]">
+          <h2 className="mb-5 text-3xl font-romain sm:text-[40px] text-[#FFB944] !leading-[60px]">
             Discover the areas set to maximise your investment returns
           </h2>
         </div>

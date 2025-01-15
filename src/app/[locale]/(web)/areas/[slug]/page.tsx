@@ -5,6 +5,10 @@ import { notFound } from "next/navigation";
 import React from "react";
 import { getTranslations } from "next-intl/server";
 
+import Contact from "@/components/sections/location/contact";
+import Hero from "@/components/sections/location/hero";
+import Properties from "@/components/sections/location/properties";
+
 export async function generateMetadata({ params }: {
   params: Promise<{
     locale: string;
@@ -12,10 +16,9 @@ export async function generateMetadata({ params }: {
   }>;
 }) {
   const { locale, slug } = await params;
-    const pageSlug = slug;
+  const pageSlug = slug;
 
   const t = await getTranslations("area.pages." + pageSlug);
-  console.log("🚀 ~ t:", t.has("meta"))
 
   if (!t.has("meta")) {
     return notFound();
@@ -36,14 +39,13 @@ export async function generateMetadata({ params }: {
 
 
 
-export default async function AreasPage({params}: {
+export default async function AreasPage({ params }: {
   readonly params: Promise<{
     locale: typeof availableLanguages[number];
     slug: string;
   }
-    >
+  >
 }) {
-
   const { slug } = await params
   const pageSlug = slug;
   const t = await getTranslations("area.pages." + pageSlug);
@@ -52,26 +54,80 @@ export default async function AreasPage({params}: {
     return notFound();
   }
 
+
   return (
     <>
-    <p>hello</p>
-      {/* <ContentHero
-        useBookingWidget={
-          !["fleet-management", "business", "strategic-partners", "travel-agencies"].includes(contentSlug)
-        }
-        pageTitle={pageContent.pageTitle}
-        imageSrc={pageContent.heroImage}
-        videoBanner={pageContent.videoBanner}
+      <Hero
+        image={t("image")}
+        locationName={t("name")}
       />
 
-      <GridContent data={pageContent.gridContent} />
-      <ContentRichText data={pageContent.richText} />
-      <ContentUSPs data={pageContent.usps} />
-
-      <ImageTextSection data={pageContent.imageTextContents} />
-      <FullWidthImageContent data={pageContent.fullImageContent} />
-      <CTA />
-      <ApplicationContent /> */}
+      <Contact />
+      <Properties
+        locationName={t("name")}
+        properties={[
+          {
+            id: 1,
+            name: "Eaton Garth Penthouse",
+            image: "/dubai/properties/property-1.png",
+            price: "$180,000",
+            location: "7722 18th Ave, Brooklyn",
+            beds: 4,
+            baths: 2,
+            sqft: 450
+          },
+          {
+            id: 2,
+            name: "Eaton Garth Penthouse",
+            image: "/dubai/properties/property-2.png",
+            price: "$180,000",
+            location: "7722 18th Ave, Brooklyn",
+            beds: 4,
+            baths: 2,
+            sqft: 450
+          },
+          {
+            id: 3,
+            name: "Eaton Garth Penthouse",
+            image: "/dubai/properties/property-3.png",
+            price: "$180,000",
+            location: "7722 18th Ave, Brooklyn",
+            beds: 4,
+            baths: 2,
+            sqft: 450
+          },
+          {
+            id: 4,
+            name: "Eaton Garth Penthouse",
+            image: "/dubai/properties/property-4.png",
+            price: "$180,000",
+            location: "7722 18th Ave, Brooklyn",
+            beds: 4,
+            baths: 2,
+            sqft: 450
+          },
+          {
+            id: 5,
+            name: "Eaton Garth Penthouse",
+            image: "/dubai/properties/property-5.png",
+            price: "$180,000",
+            location: "7722 18th Ave, Brooklyn",
+            beds: 4,
+            baths: 2,
+            sqft: 450
+          },
+          {
+            id: 6,
+            name: "Eaton Garth Penthouse",
+            image: "/dubai/properties/property-6.png",
+            price: "$180,000",
+            location: "7722 18th Ave, Brooklyn",
+            beds: 4,
+            baths: 2,
+            sqft: 450
+          }
+        ]}
+      />
     </>
   );
 }

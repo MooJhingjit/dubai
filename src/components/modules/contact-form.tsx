@@ -8,6 +8,7 @@ type Props = {
   btnText?: string;
   btnDisplay?: "inline" | "block";
   btnClassName?: string;
+  isFullInput?: boolean;
   translations: {
     nameLabel: string;
     namePlaceholder: string;
@@ -33,6 +34,7 @@ const ContactForm = (props: Props) => {
     btnText = "Submit",
     btnDisplay = "inline",
     btnClassName,
+    isFullInput,
     translations
   } = props;
 
@@ -77,7 +79,12 @@ const ContactForm = (props: Props) => {
       )}
     >
       <form className="" onSubmit={handleSubmit}>
-        <div className="grid grid-cols-1 gap-6 mb-6 sm:grid-cols-2">
+        <div
+            className={cn(
+              isFullInput ? "grid-cols-1" : "grid-cols-1 sm:grid-cols-2",
+              "grid gap-6 mb-6 "
+            )}
+          >
           <div>
             <label className="block mb-3 font-medium text-left">{translations.nameLabel}</label>
             <input
