@@ -1,16 +1,32 @@
 import React from "react";
 import Image from "next/image";
+import { LocationTranslation } from "../../../../types";
+import { getLocationName } from "@/lib/utils";
 
 type Props = {
   id: number;
   name: string;
   price: string;
-  location: string;
+  location1: LocationTranslation[];
+  location2: LocationTranslation[];
+  location3: LocationTranslation[];
   image: string;
 };
 
 const CardProperty = (props: Props) => {
-  const { id, name, price, location, image } = props;
+  const { id, name, price, location1, location2, location3, image } = props;
+
+  const numberFormat = new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    maximumFractionDigits: 0
+  });
+
+  const location = getLocationName(location1, location2, location3);
+
+  const imageProxy =
+    "https://nestopa-sites-staging.sgp1.cdn.digitaloceanspaces.com";
+
   return (
     <div
       key={id?.toString()}
@@ -27,7 +43,7 @@ const CardProperty = (props: Props) => {
           </span>
         </div>
         <Image
-          src={image}
+          src={imageProxy + image}
           alt={name}
           width={384}
           height={268}
@@ -42,7 +58,7 @@ const CardProperty = (props: Props) => {
             {name}
           </h4>
           <span className="font-suisse font-semibold text-xl sm:text-[22px] w-2/5 text-[#001F3F] text-end">
-            {price}
+            {numberFormat.format(parseFloat(price))}
           </span>
         </div>
         <div className="font-suisse text-sm text-[#1A1A1A] flex items-center space-x-1.5">
@@ -52,7 +68,7 @@ const CardProperty = (props: Props) => {
             src="/dubai/icons/pin.png"
             alt="location-icon"
           />
-          <span className="leading-7">{location}</span>
+          <span className="leading-7 line-clamp-1" title={location}>{location}</span>
         </div>
 
         <ul className="flex mt-4  text-xs lg:text-sm font-suisse h-[18px]">

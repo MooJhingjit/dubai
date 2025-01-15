@@ -107,7 +107,7 @@
           "title": "Palm Jumeirah",
           "description": "Palm J"
         },
-        "locationId": "1",
+        "locationId": "9901",
         "image": "/dubai/areas/palm-jumeirah.jpg",
         "name": "Palm Jumeirah",
         "slug": "palm-jumeirah"
@@ -117,7 +117,7 @@
           "title": "Palm Jumeirah",
           "description": "Palm J"
         },
-        "locationId": "2",
+        "locationId": "9901",
         "image": "/dubai/areas/dubai-hills-estate.jpg",
         "name": "Dubai Hills Estate",
         "slug": "dubai-hills-estate"
@@ -127,7 +127,7 @@
           "title": "Palm Jumeirah",
           "description": "Palm J"
         },
-        "locationId": "3",
+        "locationId": "9901",
         "image": "/dubai/areas/emirates-hills.jpg",
         "name": "Emirates Hills",
         "slug": "emirates-hills"
@@ -137,7 +137,7 @@
           "title": "Jumeirah Bay Islands",
           "description": "Jumeirah Bay Islands"
         },
-        "locationId": "4",
+        "locationId": "9901",
         "image": "/dubai/areas/jumeirah-bay-islands.jpg",
         "name": "Jumeirah Bay Islands",
         "slug": "jumeirah-bay-islands"
@@ -147,7 +147,7 @@
           "title": "Dubai Islands",
           "description": "Dubai Islands"
         },
-        "locationId": "5",
+        "locationId": "9901",
         "image": "/dubai/areas/dubai-islands.jpg",
         "name": "Dubai Islands",
         "slug": "dubai-islands"

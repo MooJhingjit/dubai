@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { cn } from "@/lib/utils";
 import { CheckIcon } from "lucide-react";
 import React from "react";
@@ -53,15 +53,16 @@ const ContactForm = (props: Props) => {
     };
 
     try {
-
-
-      const response = await fetch("https://staging-kiki-kelly.nestopa.com/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/contact`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(data)
+        }
+      );
 
       if (!response.ok) {
         throw new Error("Network response was not ok");
@@ -82,7 +83,10 @@ const ContactForm = (props: Props) => {
         formWrapperClassName
       )}
     >
-      <form className="" onSubmit={handleSubmit}>
+      <form
+        className=""
+        onSubmit={handleSubmit}
+      >
         <div
           className={cn(
             isFullInput ? "grid-cols-1" : "grid-cols-1 sm:grid-cols-2",
@@ -90,11 +94,14 @@ const ContactForm = (props: Props) => {
           )}
         >
           <div>
-            <label className="block mb-3 font-medium text-left">{translations.nameLabel}</label>
+            <label className="block mb-3 font-medium text-left">
+              {translations.nameLabel}
+            </label>
             <input
               type="text"
               name="firstName"
               placeholder={translations.namePlaceholder}
+              required
               className="w-full border-gray-400 rounded-sm h-[52px] px-4 shadow-sm focus:ring-black focus:border-black border text-sm"
             />
           </div>
@@ -116,6 +123,7 @@ const ContactForm = (props: Props) => {
             <input
               type="text"
               name="phone"
+              required
               placeholder={translations.phonePlaceholder}
               className="w-full border-gray-400 rounded-sm h-[52px] px-4 shadow-sm focus:ring-black focus:border-black border text-sm"
             />
@@ -123,7 +131,9 @@ const ContactForm = (props: Props) => {
           <div>
             <label className="block mb-3 font-medium text-left">
               {translations.emailLabel}{" "}
-              <span className="font-normal text-gray-600">{translations.emailOptional}</span>
+              <span className="font-light text-xs text-gray-600">
+                {translations.emailOptional}
+              </span>
             </label>
             <input
               type="text"
@@ -146,54 +156,59 @@ const ContactForm = (props: Props) => {
             </div>
           )}
         </div>
-        {
-          showSuccess ? (
-            <div className="text-green-600 text-center text-lg flex items-center space-x-1">
-              <CheckIcon size={20} />
-              <p> Your message has been sent successfully</p>
-            </div>
-          ) : (
-            <>
-              <div className="flex flex-col justify-between gap-8 md:flex-row md:items-center mt-9 md:gap-0">
-                <div className="flex items-center">
-                  <input
-                    type="checkbox"
-                    id="terms"
-                    className="w-4 h-4 text-blue-500 border-gray-300 rounded focus:ring-blue-400"
-                  />
-                  <label
-                    htmlFor="terms"
-                    className="font-suisse  ml-2  text-[#009BDC] text-sm sm:text-base"
+        {showSuccess ? (
+          <div className="text-green-600 text-center text-lg flex items-center space-x-1">
+            <CheckIcon size={20} />
+            <p> Your message has been sent successfully</p>
+          </div>
+        ) : (
+          <>
+            <div className="flex flex-col justify-between gap-8 md:flex-row md:items-center mt-9 md:gap-0">
+              <div className="flex items-center">
+                <input
+                  type="checkbox"
+                  id="terms"
+                  required
+                  className="w-4 h-4 text-blue-500 border-gray-300 rounded focus:ring-blue-400"
+                />
+                <label
+                  htmlFor="terms"
+                  className="font-suisse  ml-2  text-[#009BDC] text-sm sm:text-base"
+                >
+                  {translations.termsText}{" "}
+                  <a
+                    href="#"
+                    className="underline "
                   >
-                    {translations.termsText}{" "}
-                    <a
-                      href="#"
-                      className="underline "
-                    >
-                      {translations.termsLink}
-                    </a>{" "}
-                    {translations.and}{" "}
-                    <a
-                      href="#"
-                      className="underline "
-                    >
-                      {translations.privacyLink}
-                    </a>
-                  </label>
-                </div>
-
-                {btnDisplay === "inline" && <ContactFormButton text={btnText} className={btnClassName} />}
+                    {translations.termsLink}
+                  </a>{" "}
+                  {translations.and}{" "}
+                  <a
+                    href="#"
+                    className="underline "
+                  >
+                    {translations.privacyLink}
+                  </a>
+                </label>
               </div>
-              {btnDisplay === "block" && (
-                <div className="flex justify-start mt-8">
-                  <ContactFormButton text={btnText} className={btnClassName} />
-                </div>
+
+              {btnDisplay === "inline" && (
+                <ContactFormButton
+                  text={btnText}
+                  className={btnClassName}
+                />
               )}
-            </>
-          )
-        }
-
-
+            </div>
+            {btnDisplay === "block" && (
+              <div className="flex justify-start mt-8">
+                <ContactFormButton
+                  text={btnText}
+                  className={btnClassName}
+                />
+              </div>
+            )}
+          </>
+        )}
       </form>
     </div>
   );

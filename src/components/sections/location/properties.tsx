@@ -1,5 +1,6 @@
 import React from "react";
 import CardProperty from "../../modules/cards/card-property";
+import { LocationTranslation } from "../../../../types";
 
 type Props = {
   locationName: string;
@@ -7,7 +8,9 @@ type Props = {
     id: number;
     name: string;
     price: string;
-    location: string;
+    location1: LocationTranslation[];
+    location2: LocationTranslation[];
+    location3: LocationTranslation[];
     beds: number;
     baths: number;
     image: string;
@@ -34,7 +37,9 @@ const Properties = (props: Props) => {
               name={property.name}
               price={property.price}
               image={property.image}
-              location={property.location}
+              location1={property.location1}
+              location2={property.location2}
+              location3={property.location3}
             />
           ))}
         </div>
