@@ -57,11 +57,9 @@
       "emiratesHill": "Emirates Hill",
       "downtownDubai": "Downtown Dubai"
     },
-    "properties": {
-      "title": "Properties",
-      "terms": "Terms & conditions",
-      "privacy": "Privacy policy"
-    }
+    "properties": "Properties",
+    "terms": "Terms & conditions",
+    "privacy": "Privacy policy"
   },
   "navigation": {
     "areas": "Areas",
@@ -132,8 +130,8 @@
       },
       "jumeirah-bay-islands": {
         "meta": {
-          "title": "Palm Jumeirah",
-          "description": "Palm J"
+          "title": "Jumeirah Bay Islands",
+          "description": "Jumeirah Bay Islands"
         },
         "locationId": 4,
         "image": "/dubai/areas/jumeirah-bay-islands.jpg",
@@ -142,8 +140,8 @@
       },
       "dubai-islands": {
         "meta": {
-          "title": "Palm Jumeirah",
-          "description": "Palm J"
+          "title": "Dubai Islands",
+          "description": "Dubai Islands"
         },
         "locationId": 5,
         "image": "/dubai/areas/dubai-islands.jpg",
@@ -152,8 +150,8 @@
       },
       "dubai-downtown": {
         "meta": {
-          "title": "Palm Jumeirah",
-          "description": "Palm J"
+          "title": "Downtown Dubai",
+          "description": "Downtown Dubai"
         },
         "locationId": 6,
         "image": "/dubai/areas/dubai-downtown.jpg",

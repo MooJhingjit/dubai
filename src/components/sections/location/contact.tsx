@@ -3,11 +3,13 @@ import Image from "next/image";
 import ContactForm from "../../modules/contact-form";
 import { useTranslations } from "next-intl";
 
-const Contact = () => {
+type Props = {
+  locationName: string
+};
+const Contact = (props: Props) => {
 
+  const {locationName} = props;
   const contactFormTranslations = useTranslations("contactForm");
-
-
   return (
     <div className="w-full pt-14 pb-32 relative">
       <div className="absolute top-0 right-0">
@@ -24,7 +26,7 @@ const Contact = () => {
           <h2 className="mb-5 text-3xl text-[#FFB944] font-romain sm:text-5xl !leading-[64px]">
             Everything you need to know
             <br />
-            about buying property in Emirates Hills.
+            about buying property in {locationName}.
           </h2>
           <p className="font-suisse text-lg sm:text-[32px] mb-5 text-[#F7F9FC] !leading-[45px]">
             Get access to exclusive investment opportunities before they hit the

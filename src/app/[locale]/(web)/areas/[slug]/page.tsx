@@ -62,7 +62,9 @@ export default async function AreasPage({ params }: {
         locationName={t("name")}
       />
 
-      <Contact />
+      <Contact
+        locationName={t("name")}
+      />
       <Properties
         locationName={t("name")}
         properties={[
