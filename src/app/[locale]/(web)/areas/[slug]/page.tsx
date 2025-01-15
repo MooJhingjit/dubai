@@ -25,7 +25,8 @@ export async function generateMetadata({
     return notFound();
   }
 
-  const links = generateHreflang(availableLanguages, "/areas");
+
+  const links = generateHreflang(availableLanguages, "areas/" + pageSlug);
 
   return {
     title: t("meta.title"),
