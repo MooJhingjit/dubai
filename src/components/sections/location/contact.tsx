@@ -59,6 +59,7 @@ const Contact = (props: Props) => {
               privacyLink: contactFormTranslations("privacyLink")
 
             }}
+            locationName={locationName}
           />
         </div>
       </div>

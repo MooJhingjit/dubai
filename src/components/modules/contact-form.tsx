@@ -1,7 +1,7 @@
 "use client";
 import { cn } from "@/lib/utils";
-import { CheckIcon } from "lucide-react";
-import React from "react";
+import { CheckIcon, CircleXIcon } from "lucide-react";
+import React, { useState } from "react";
 
 type Props = {
   isHideMessage?: boolean;
@@ -10,6 +10,7 @@ type Props = {
   btnDisplay?: "inline" | "block";
   btnClassName?: string;
   isFullInput?: boolean;
+  locationName?: string;
   translations: {
     nameLabel: string;
     namePlaceholder: string;
@@ -36,20 +37,32 @@ const ContactForm = (props: Props) => {
     btnDisplay = "inline",
     btnClassName,
     isFullInput,
+    locationName,
     translations
   } = props;
 
-  const [showSuccess, setShowSuccess] = React.useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
+  const [showError, setShowError] = useState(false);
+  const [btnLoading, setBtnLoading] = useState(false);
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     setShowSuccess(false);
+    setBtnLoading(true);
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
+
+    let message = "";
+    if (locationName) {
+      message = `Location: ${locationName}\n${String(
+        formData.get("message") ?? ""
+      )}`;
+    }
+
     const data = {
       name: formData.get("firstName") + " " + formData.get("lastName"),
       phone: formData.get("phone"),
       email: formData.get("email"),
-      message: "test" //formData.get("message"),
+      notes: message || formData.get("message")
     };
 
     try {
@@ -64,15 +77,23 @@ const ContactForm = (props: Props) => {
         }
       );
 
+      setBtnLoading(false);
+
       if (!response.ok) {
-        throw new Error("Network response was not ok");
+        setShowError(true);
+        return;
       }
 
       const result = await response.json();
-      setShowSuccess(true);
-      console.log("Success:", result);
-    } catch (error) {
-      console.error("Error:", error);
+      if (result.success) {
+        setShowSuccess(true);
+      } else {
+        setShowError(true);
+      }
+    } catch (err) {
+      console.log("🚀 ~ handleSubmit ~ err:", err);
+      setShowError(true);
+      setBtnLoading(false);
     }
   };
 
@@ -157,9 +178,12 @@ const ContactForm = (props: Props) => {
           )}
         </div>
         {showSuccess ? (
-          <div className="text-green-600 text-center text-lg flex items-center space-x-1">
-            <CheckIcon size={20} />
-            <p> Your message has been sent successfully</p>
+          <div className="text-green-600 text-start  text-lg flex items-start space-x-1">
+            <CheckIcon
+              size={20}
+              className="mt-1"
+            />
+            <p>Your message has been sent successfully</p>
           </div>
         ) : (
           <>
@@ -199,12 +223,23 @@ const ContactForm = (props: Props) => {
                 />
               )}
             </div>
+
             {btnDisplay === "block" && (
               <div className="flex justify-start mt-8">
                 <ContactFormButton
                   text={btnText}
+                  loading={btnLoading}
                   className={btnClassName}
                 />
+              </div>
+            )}
+            {showError && (
+              <div className="text-red-600  text-start text-lg flex items-start space-x-1">
+                <CircleXIcon
+                  size={20}
+                  className="mt-1"
+                />
+                <p>Something went wrong. Please try again later.</p>
               </div>
             )}
           </>
@@ -219,13 +254,16 @@ export default ContactForm;
 type ContactFormButtonProps = {
   text: string;
   className?: string;
+  loading?: boolean;
 };
 const ContactFormButton = (props: ContactFormButtonProps) => {
-  const { text, className } = props;
+  const { text, className, loading } = props;
   return (
     <button
       className={cn(
-        "font-suisse bg-[#009BDC] text-xl text-[#F7F9FC] py-3 px-8 rounded-full shadow-md",
+        loading
+          ? "cursor-not-allowed bg-gray-400 text-white text-xl py-3 px-8 rounded-full shadow-md"
+          : "font-suisse bg-[#009BDC] text-xl text-[#F7F9FC] py-3 px-8 rounded-full shadow-md",
         className
       )}
     >

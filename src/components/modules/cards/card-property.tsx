@@ -68,10 +68,10 @@ const CardProperty = (props: Props) => {
       {/* content */}
       <div className="p-2 lg:p-4">
         <div className="flex justify-between items-center mb-1">
-          <h4 className="font-suisse font-medium text-[#1A1A1A] text-lg truncate w-3/5">
+          <h4 className="font-suisse font-medium text-[#1A1A1A] text-lg line-clamp-1 text-wrap">
             {name}
           </h4>
-          <span className="font-suisse font-semibold text-xl sm:text-[22px] w-2/5 text-[#001F3F] text-end">
+          <span className="font-suisse font-semibold text-xl sm:text-[22px] text-[#001F3F] text-end self-start">
             {numberFormat.format(parseFloat(price))}
           </span>
         </div>
@@ -122,7 +122,12 @@ const CardProperty = (props: Props) => {
               alt="square-icon"
               className="mr-3"
             />
-            <span className="">{interiorSize || "-"} Sqft</span>
+            <span className="">
+              {interiorSize
+                ? new Intl.NumberFormat().format(interiorSize)
+                : "-"}{" "}
+              Sqft
+            </span>
           </li>
         </ul>
       </div>

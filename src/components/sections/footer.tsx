@@ -1,58 +1,107 @@
 import React from "react";
 import Image from "next/image";
-import {  useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 
 const Footer = () => {
   const t = useTranslations("footer");
   const tLocation = useTranslations("area.pages");
 
-
   return (
     <footer className="font-poppins bg-[#D1D5D7] text-[#004170] pb-4 pt-10 md:pt-28">
       <div className="grid max-w-md grid-cols-1 gap-4 px-4 mx-auto sm:max-w-7xl sm:px-6 lg:px-8 xl:px-0 sm:grid-cols-2 lg:grid-cols-6 xl:grid-cols-10 gap-y-10 xl:gap-y-0 xl:gap-20">
         {/* About Section */}
         <div className="text-xl ">
-          <Link className="mb-5 font-bold block"
+          <Link
+            className="mb-5 font-bold block"
             href="/about-us"
-          >{t("about")}</Link>
-          <Link className="mb-5 font-bold block"
+          >
+            {t("about")}
+          </Link>
+          <Link
+            className="mb-5 font-bold block"
             href="/contact-us"
-          >{t("contact")}</Link>
-          <Link className="mb-5 font-bold block"
+          >
+            {t("contact")}
+          </Link>
+          <Link
+            className="mb-5 font-bold block"
             href="/people"
-          >{t("people")}</Link>
+          >
+            {t("people")}
+          </Link>
         </div>
 
         {/* Areas Section */}
         <div className="lg:col-span-6 xl:pl-10 xl:col-span-4">
-          <h3 className="mb-4 text-xl font-bold">{t("areas.title")}</h3>
+          <h3 className="mb-4 text-xl font-bold">
+            <Link
+              className="mb-5 font-bold block"
+              href="/areas"
+            >
+              {t("areas.title")}
+            </Link>
+          </h3>
           <ul className="grid grid-cols-2 gap-4 text-xl">
             <li className="mb-2 cursor-pointer hover:underline">
-              <Link href="/areas/palm-jumeirah" className="whitespace-nowrap">{tLocation("palm-jumeirah.name")}</Link>
+              <Link
+                href="/areas/palm-jumeirah"
+                className=""
+              >
+                {tLocation("palm-jumeirah.name")}
+              </Link>
             </li>
             <li className="mb-2 cursor-pointer hover:underline">
-              <Link href="/areas/dubai-islands" className="whitespace-nowrap">{tLocation("dubai-islands.name")}</Link>
+              <Link
+                href="/areas/dubai-islands"
+                className=""
+              >
+                {tLocation("dubai-islands.name")}
+              </Link>
             </li>
             <li className="mb-2 cursor-pointer hover:underline">
-              <Link href="/areas/dubai-hills-estate" className="whitespace-nowrap">{tLocation("dubai-hills-estate.name")}</Link>
+              <Link
+                href="/areas/dubai-hills-estate"
+                className=""
+              >
+                {tLocation("dubai-hills-estate.name")}
+              </Link>
             </li>
             <li className="mb-2 cursor-pointer hover:underline">
-              <Link href="/areas/jumeirah-bay-islands" className="whitespace-nowrap">{tLocation("jumeirah-bay-islands.name")}</Link>
+              <Link
+                href="/areas/jumeirah-bay-islands"
+                className=""
+              >
+                {tLocation("jumeirah-bay-islands.name")}
+              </Link>
             </li>
             <li className="mb-2 cursor-pointer hover:underline">
-              <Link href="/areas/emirates-hills" className="whitespace-nowrap">{tLocation("emirates-hills.name")}</Link>
+              <Link
+                href="/areas/emirates-hills"
+                className=""
+              >
+                {tLocation("emirates-hills.name")}
+              </Link>
             </li>
             <li className="cursor-pointer hover:underline">
-              <Link href="/areas/dubai-downtown" className="whitespace-nowrap">{tLocation("dubai-downtown.name")}</Link>
-
+              <Link
+                href="/areas/dubai-downtown"
+                className=""
+              >
+                {tLocation("dubai-downtown.name")}
+              </Link>
             </li>
           </ul>
         </div>
 
         {/* Properties Section */}
         <div className="lg:col-span-3 xl:col-span-4">
-          <Link href="/properties" className="mb-4 text-xl font-bold block">{t("properties")}</Link>
+          <Link
+            href="/properties"
+            className="mb-4 text-xl font-bold block"
+          >
+            {t("properties")}
+          </Link>
           <ul className="grid gap-4 text-xl">
             <li className="mb-2 cursor-pointer hover:underline">
               <Link href="#">{t("terms")}</Link>

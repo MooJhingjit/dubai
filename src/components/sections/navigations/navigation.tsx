@@ -16,7 +16,7 @@ const Navigation = () => {
   return (
     <div className="flex items-center justify-between">
       <NavigationMenu>
-        <NavigationMenuList className="gap-24">
+        <NavigationMenuList className="gap-12 xl:gap-24">
           <NavigationMenuItem>
             <NavigationMenuTrigger className="flex items-center gap-1">
               <Link
@@ -75,9 +75,9 @@ const Navigation = () => {
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
-      <button className="bg-white text-[#1E1E1E] py-1.5 px-6 rounded-full shadow-md h-[44px]">
+      <Link href="/contact-us" className="bg-white text-[#1E1E1E] py-1.5 px-6 rounded-full shadow-md h-[44px] flex items-center">
         {t("contact")}
-      </button>
+      </Link>
     </div>
   );
 };
