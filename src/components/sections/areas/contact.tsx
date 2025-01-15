@@ -11,7 +11,7 @@ const Contact = () => {
         <div className="max-w-md px-4 mx-auto text-center sm:max-w-7xl md:px-8 xl:px-0">
           <ContactForm
             btnText="Download your free report"
-            btnClassName="w-full sm:w-[352]"
+            btnClassName="w-full sm:w-[352px]"
             translations={{
               nameLabel: contactFormTranslations("nameLabel"),
               namePlaceholder: contactFormTranslations("namePlaceholder"),
