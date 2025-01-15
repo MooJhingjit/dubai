@@ -164,7 +164,7 @@ const ContactForm = (props: Props) => {
             />
           </div>
           {!isHideMessage && (
-            <div className="col-span-2">
+            <div className="col-span-1 sm:col-span-2">
               <label className="block mb-3 font-medium text-left">
                 {translations.messageLabel}
               </label>
@@ -172,7 +172,7 @@ const ContactForm = (props: Props) => {
                 name="message"
                 placeholder={translations.messagePlaceholder}
                 rows={5}
-                className="w-full p-4 text-sm border border-gray-400 rounded-sm shadow-sm focus:ring-black focus:border-black"
+                className="w-full p-4 h-[214px] text-sm border border-gray-400 rounded-sm shadow-sm focus:ring-black focus:border-black"
               />
             </div>
           )}
