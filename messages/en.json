@@ -69,6 +69,10 @@
     "contact": "Contact Us"
   },
   "aboutUs": {
+    "meta": {
+      "title": "About Knight Frank MENA",
+      "description": "Knight Frank is a leading independent real estate consultancy in Dubai. Our expert team of property consultants deliver bespoke property solutions to clients across the MENA region."
+    },
     "hero": {
       "backgroundImage": "/dubai/about/hero.png"
     },

@@ -1,5 +1,6 @@
 "use client"
 import { cn } from "@/lib/utils";
+import { CheckIcon } from "lucide-react";
 import React from "react";
 
 type Props = {
@@ -38,34 +39,37 @@ const ContactForm = (props: Props) => {
     translations
   } = props;
 
+  const [showSuccess, setShowSuccess] = React.useState(false);
+
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    setShowSuccess(false);
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
     const data = {
-      firstName: formData.get("firstName"),
-      lastName: formData.get("lastName"),
+      name: formData.get("firstName") + " " + formData.get("lastName"),
       phone: formData.get("phone"),
       email: formData.get("email"),
-      message: formData.get("message"),
+      message: "test" //formData.get("message"),
     };
 
     try {
-    console.log("🚀 ~ handleSubmit ~ data:", data)
 
-      // const response = await fetch("https://www.api.com", {
-      //   method: "POST",
-      //   headers: {
-      //     "Content-Type": "application/json",
-      //   },
-      //   body: JSON.stringify(data),
-      // });
 
-      // if (!response.ok) {
-      //   throw new Error("Network response was not ok");
-      // }
+      const response = await fetch("https://staging-kiki-kelly.nestopa.com/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
 
-      // const result = await response.json();
-      // console.log("Success:", result);
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+
+      const result = await response.json();
+      setShowSuccess(true);
+      console.log("Success:", result);
     } catch (error) {
       console.error("Error:", error);
     }
@@ -80,11 +84,11 @@ const ContactForm = (props: Props) => {
     >
       <form className="" onSubmit={handleSubmit}>
         <div
-            className={cn(
-              isFullInput ? "grid-cols-1" : "grid-cols-1 sm:grid-cols-2",
-              "grid gap-6 mb-6 "
-            )}
-          >
+          className={cn(
+            isFullInput ? "grid-cols-1" : "grid-cols-1 sm:grid-cols-2",
+            "grid gap-6 mb-6 "
+          )}
+        >
           <div>
             <label className="block mb-3 font-medium text-left">{translations.nameLabel}</label>
             <input
@@ -142,41 +146,53 @@ const ContactForm = (props: Props) => {
             </div>
           )}
         </div>
-        <div className="flex flex-col justify-between gap-8 md:flex-row md:items-center mt-9 md:gap-0">
-          <div className="flex items-center">
-            <input
-              type="checkbox"
-              id="terms"
-              className="w-4 h-4 text-blue-500 border-gray-300 rounded focus:ring-blue-400"
-            />
-            <label
-              htmlFor="terms"
-              className="font-suisse  ml-2  text-[#009BDC] text-sm sm:text-base"
-            >
-              {translations.termsText}{" "}
-              <a
-                href="#"
-                className="underline "
-              >
-                {translations.termsLink}
-              </a>{" "}
-              {translations.and}{" "}
-              <a
-                href="#"
-                className="underline "
-              >
-                {translations.privacyLink}
-              </a>
-            </label>
-          </div>
+        {
+          showSuccess ? (
+            <div className="text-green-600 text-center text-lg flex items-center space-x-1">
+              <CheckIcon size={20} />
+              <p> Your message has been sent successfully</p>
+            </div>
+          ) : (
+            <>
+              <div className="flex flex-col justify-between gap-8 md:flex-row md:items-center mt-9 md:gap-0">
+                <div className="flex items-center">
+                  <input
+                    type="checkbox"
+                    id="terms"
+                    className="w-4 h-4 text-blue-500 border-gray-300 rounded focus:ring-blue-400"
+                  />
+                  <label
+                    htmlFor="terms"
+                    className="font-suisse  ml-2  text-[#009BDC] text-sm sm:text-base"
+                  >
+                    {translations.termsText}{" "}
+                    <a
+                      href="#"
+                      className="underline "
+                    >
+                      {translations.termsLink}
+                    </a>{" "}
+                    {translations.and}{" "}
+                    <a
+                      href="#"
+                      className="underline "
+                    >
+                      {translations.privacyLink}
+                    </a>
+                  </label>
+                </div>
 
-          {btnDisplay === "inline" && <ContactFormButton text={btnText}  className={btnClassName}/>}
-        </div>
-        {btnDisplay === "block" && (
-          <div className="flex justify-start mt-8">
-            <ContactFormButton text={btnText}  className={btnClassName}/>
-          </div>
-        )}
+                {btnDisplay === "inline" && <ContactFormButton text={btnText} className={btnClassName} />}
+              </div>
+              {btnDisplay === "block" && (
+                <div className="flex justify-start mt-8">
+                  <ContactFormButton text={btnText} className={btnClassName} />
+                </div>
+              )}
+            </>
+          )
+        }
+
 
       </form>
     </div>

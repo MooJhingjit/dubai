@@ -18,7 +18,7 @@ const TopAreas = () => {
           {keys.map((area) => (
             <Link
               key={area}
-              href={`/dubai/areas/${t(`${area}.slug`)}`}
+              href={`/areas/${t(`${area}.slug`)}`}
             >
               <CardAreaGrid
                 image={t(`${area}.image`)}
