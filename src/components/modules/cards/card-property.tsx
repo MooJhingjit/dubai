@@ -11,10 +11,24 @@ type Props = {
   location2: LocationTranslation[];
   location3: LocationTranslation[];
   image: string;
+  bedrooms: number;
+  bathrooms: number;
+  interiorSize: number;
 };
 
 const CardProperty = (props: Props) => {
-  const { id, name, price, location1, location2, location3, image } = props;
+  const {
+    id,
+    name,
+    price,
+    location1,
+    location2,
+    location3,
+    image,
+    bedrooms,
+    bathrooms,
+    interiorSize
+  } = props;
 
   const numberFormat = new Intl.NumberFormat("en-US", {
     style: "currency",
@@ -68,7 +82,12 @@ const CardProperty = (props: Props) => {
             src="/dubai/icons/pin.png"
             alt="location-icon"
           />
-          <span className="leading-7 line-clamp-1" title={location}>{location}</span>
+          <span
+            className="leading-7 line-clamp-1"
+            title={location}
+          >
+            {location}
+          </span>
         </div>
 
         <ul className="flex mt-4  text-xs lg:text-sm font-suisse h-[18px]">
@@ -81,7 +100,7 @@ const CardProperty = (props: Props) => {
               className="mr-3"
             />
 
-            <span className="">4 Beds</span>
+            <span className="">{bedrooms || "-"} Beds</span>
           </li>
           <li className="w-[1px] h-[18px] bg-[#939EAB] mr-4"></li>
           <li className="flex  flex-1  items-center justify-center">
@@ -92,7 +111,7 @@ const CardProperty = (props: Props) => {
               alt="bath-icon"
               className="mr-3"
             />
-            <span className="">2 Baths</span>
+            <span className="">{bathrooms || "-"} Baths</span>
           </li>
           <li className="w-[1px] h-[18px] bg-[#939EAB] ml-2 mr-4"></li>
           <li className="flex   flex-1 items-center justify-center">
@@ -103,7 +122,7 @@ const CardProperty = (props: Props) => {
               alt="square-icon"
               className="mr-3"
             />
-            <span className="">4,050 Sqft</span>
+            <span className="">{interiorSize || "-"} Sqft</span>
           </li>
         </ul>
       </div>

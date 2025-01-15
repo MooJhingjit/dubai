@@ -11,10 +11,10 @@ type Props = {
     location1: LocationTranslation[];
     location2: LocationTranslation[];
     location3: LocationTranslation[];
-    beds: number;
-    baths: number;
+    bedrooms: number;
+    bathrooms: number;
     image: string;
-    sqft: number;
+    interiorSize: number;
   }[];
 };
 const Properties = (props: Props) => {
@@ -40,6 +40,9 @@ const Properties = (props: Props) => {
               location1={property.location1}
               location2={property.location2}
               location3={property.location3}
+              bedrooms={property.bedrooms}
+              bathrooms={property.bathrooms}
+              interiorSize={property.interiorSize}
             />
           ))}
         </div>

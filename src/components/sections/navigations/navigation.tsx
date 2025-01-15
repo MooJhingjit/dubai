@@ -2,7 +2,7 @@ import {
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuLink,
-  NavigationMenuList,
+  NavigationMenuList
 } from "@/components/ui/navigation-menu";
 import { NavigationMenuTrigger } from "@radix-ui/react-navigation-menu";
 import { ChevronDown } from "lucide-react";
@@ -19,7 +19,13 @@ const Navigation = () => {
         <NavigationMenuList className="gap-24">
           <NavigationMenuItem>
             <NavigationMenuTrigger className="flex items-center gap-1">
-              {t("areas")}
+              <Link
+                href="/areas"
+                legacyBehavior
+                passHref
+              >
+                {t("areas")}
+              </Link>
               <ChevronDown className="w-4 h-4" />
             </NavigationMenuTrigger>
             {/* <NavigationMenuContent>
@@ -41,17 +47,29 @@ const Navigation = () => {
           </NavigationMenuItem>
 
           <NavigationMenuItem>
-            <Link href="/properties" legacyBehavior passHref>
+            <Link
+              href="/properties"
+              legacyBehavior
+              passHref
+            >
               <NavigationMenuLink>{t("properties")}</NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link href="/about-us" legacyBehavior passHref>
+            <Link
+              href="/about-us"
+              legacyBehavior
+              passHref
+            >
               <NavigationMenuLink>{t("about")}</NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link href="/people" legacyBehavior passHref>
+            <Link
+              href="/people"
+              legacyBehavior
+              passHref
+            >
               <NavigationMenuLink>{t("people")}</NavigationMenuLink>
             </Link>
           </NavigationMenuItem>

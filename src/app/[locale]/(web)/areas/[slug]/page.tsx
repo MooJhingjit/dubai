@@ -7,6 +7,7 @@ import { getTranslations } from "next-intl/server";
 import Contact from "@/components/sections/location/contact";
 import Hero from "@/components/sections/location/hero";
 import Properties from "@/components/sections/location/properties";
+import { Property } from "../../../../../../types";
 
 export async function generateMetadata({
   params
@@ -24,7 +25,6 @@ export async function generateMetadata({
   if (!t.has("meta")) {
     return notFound();
   }
-
 
   const links = generateHreflang(availableLanguages, "areas/" + pageSlug);
 
@@ -89,20 +89,17 @@ export default async function AreasPage({
       <Contact locationName={t("name")} />
       <Properties
         locationName={t("name")}
-        properties={properties.map((property: any) => ({
+        properties={properties.map((property: Property) => ({
           id: property.id,
-          name: property.PropertyContentTranslation && property.PropertyContentTranslation[0].title,
-          image:
-            property.PropertyMedia &&
-            property.PropertyMedia[0] &&
-            property.PropertyMedia[0].filePath,
+          name: property.PropertyContentTranslation?.[0]?.title,
+          image: property.PropertyMedia?.[0]?.filePath,
           price: property.priceSale,
-          location1: property.Location1.LocationTranslation,
-          location2: property.Location2.LocationTranslation,
-          location3: property.Location3.LocationTranslation,
-          beds: property.bedrooms,
-          baths: property.bathrooms,
-          sqft: property.interiorSize
+          location1: property.Location1?.LocationTranslation,
+          location2: property.Location2?.LocationTranslation,
+          location3: property.Location3?.LocationTranslation,
+          bedrooms: property.bedrooms,
+          bathrooms: property.bathrooms,
+          interiorSize: property.interiorSize
         }))}
         // properties={[
         //   {
