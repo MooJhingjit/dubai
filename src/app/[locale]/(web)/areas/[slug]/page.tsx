@@ -1,4 +1,3 @@
-
 import { availableLanguages } from "@/lib/config";
 import { generateHreflang } from "@/lib/utils";
 import { notFound } from "next/navigation";
@@ -37,7 +36,13 @@ export async function generateMetadata({ params }: {
   };
 }
 
-
+async function fetchProperties(locationId: string) {
+  const response = await fetch(`https://staging-kiki-kelly.nestopa.com/api/properties?locationId=${locationId}&page=1&limit=3`);
+  if (!response.ok) {
+    throw new Error('Failed to fetch properties');
+  }
+  return response.json();
+}
 
 export default async function AreasPage({ params }: {
   readonly params: Promise<{
@@ -46,7 +51,7 @@ export default async function AreasPage({ params }: {
   }
   >
 }) {
-  const { slug } = await params
+  const { slug } = await params;
   const pageSlug = slug;
   const t = await getTranslations("area.pages." + pageSlug);
 
@@ -54,6 +59,18 @@ export default async function AreasPage({ params }: {
     return notFound();
   }
 
+  // const locationId = t("locationId");
+
+  const properties = await fetchProperties("4306");
+
+  // id: 1,
+  // name: "Eaton Garth Penthouse",
+  // image: "/dubai/properties/property-1.png",
+  // price: "$180,000",
+  // location: "7722 18th Ave, Brooklyn",
+  // beds: 4,
+  // baths: 2,
+  // sqft: 450
 
   return (
     <>
@@ -67,68 +84,7 @@ export default async function AreasPage({ params }: {
       />
       <Properties
         locationName={t("name")}
-        properties={[
-          {
-            id: 1,
-            name: "Eaton Garth Penthouse",
-            image: "/dubai/properties/property-1.png",
-            price: "$180,000",
-            location: "7722 18th Ave, Brooklyn",
-            beds: 4,
-            baths: 2,
-            sqft: 450
-          },
-          {
-            id: 2,
-            name: "Eaton Garth Penthouse",
-            image: "/dubai/properties/property-2.png",
-            price: "$180,000",
-            location: "7722 18th Ave, Brooklyn",
-            beds: 4,
-            baths: 2,
-            sqft: 450
-          },
-          {
-            id: 3,
-            name: "Eaton Garth Penthouse",
-            image: "/dubai/properties/property-3.png",
-            price: "$180,000",
-            location: "7722 18th Ave, Brooklyn",
-            beds: 4,
-            baths: 2,
-            sqft: 450
-          },
-          {
-            id: 4,
-            name: "Eaton Garth Penthouse",
-            image: "/dubai/properties/property-4.png",
-            price: "$180,000",
-            location: "7722 18th Ave, Brooklyn",
-            beds: 4,
-            baths: 2,
-            sqft: 450
-          },
-          {
-            id: 5,
-            name: "Eaton Garth Penthouse",
-            image: "/dubai/properties/property-5.png",
-            price: "$180,000",
-            location: "7722 18th Ave, Brooklyn",
-            beds: 4,
-            baths: 2,
-            sqft: 450
-          },
-          {
-            id: 6,
-            name: "Eaton Garth Penthouse",
-            image: "/dubai/properties/property-6.png",
-            price: "$180,000",
-            location: "7722 18th Ave, Brooklyn",
-            beds: 4,
-            baths: 2,
-            sqft: 450
-          }
-        ]}
+        properties={properties}
       />
     </>
   );
