@@ -1,7 +1,9 @@
+import { useTranslations } from "next-intl";
 import React from "react";
-// import ContactForm from "../../modules/contact-form";
 
 const Discover = () => {
+  const t = useTranslations("area.discover");
+
   return (
     <div className="w-full bg-[#001F3F] ">
       <div className="max-w-md sm:max-w-7xl flex  relative justify-end  mx-auto bg-[#001F3F]/80 h-auto sm:h-[300px]">
@@ -19,11 +21,10 @@ const Discover = () => {
         {/* Text Content Section */}
         <div className="relative flex items-center z-30 px-4 py-8 text-center md:w-2/3 md:text-right lg:py-16 sm:px-6 lg:px-8 xl:px-0">
           <h2 className="mb-5 text-3xl font-romain sm:text-[40px] text-[#FFB944] !leading-[60px]">
-            Discover the areas set to maximise your investment returns
+            {t("title")}
           </h2>
         </div>
       </div>
-      {/* <ContactForm className="!pt-0" btnText="Download your free report" /> */}
     </div>
   );
 };

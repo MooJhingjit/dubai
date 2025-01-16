@@ -31,8 +31,10 @@ export default function Contact() {
             termsText: contactFormTranslations("termsText"),
             termsLink: contactFormTranslations("termsLink"),
             and: contactFormTranslations("and"),
-            privacyLink: contactFormTranslations("privacyLink")
-
+            privacyLink: contactFormTranslations("privacyLink"),
+            successMessage: contactFormTranslations("successMessage"),
+            errorMessage: contactFormTranslations("errorMessage"),
+            submit: contactFormTranslations("submit"),
           }}
         />
       </div>

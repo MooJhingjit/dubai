@@ -1,6 +1,7 @@
 import React from "react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import Link from "next/link";
 
 const Partner = () => {
   const t = useTranslations("aboutUs.partner");
@@ -21,9 +22,9 @@ const Partner = () => {
               </p>
 
               <div className="mt-12">
-                <button className="font-suisse bg-[#009BDC] text-xl  text-[#F7F9FC] py-3 px-8 rounded-full shadow-md w-full sm:w-80 ">
+                <Link href={"/contact-us"} className="font-suisse flex justify-center items-center bg-[#009BDC] text-xl  text-[#F7F9FC] py-3 px-8 rounded-full shadow-md w-full sm:w-80 ">
                   {t("cta")}
-                </button>
+                </Link>
               </div>
             </div>
           </div>

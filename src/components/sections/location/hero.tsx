@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import React from "react";
 
 type Props = {
@@ -6,6 +7,8 @@ type Props = {
 };
 const Hero = (props: Props) => {
   const { image, locationName } = props;
+  const t = useTranslations("area.pages.hero");
+
   return (
     <div className="w-full h-[calc(100vh-80px)] relative">
       <div
@@ -39,7 +42,7 @@ const Hero = (props: Props) => {
               lineHeight: "1.5"
             }}
           >
-            Exclusive investment opportuities in
+            {t("title")}
             <br /> <span className="text-[#FFB944]">{locationName}</span>
           </h1>
           {/* Subheading */}
@@ -49,12 +52,11 @@ const Hero = (props: Props) => {
               lineHeight: "1.4"
             }}
           >
-            Discover the most desirable areas in {locationName} that are providing the
-            hightest returns to imformed property investors
+            {t("subTitle", { locationName })}
           </p>
           {/* Call to Action Button */}
           <button className="font-suisse bg-[#FFB944] sm:text-xl text-[#0D1B2A]   pb-1.5 pt-2 rounded-full shadow-md px-8 md:px-20 w-full md:w-auto">
-            View {locationName} Properties
+            {t("cta", { locationName })}
           </button>
         </div>
       </div>

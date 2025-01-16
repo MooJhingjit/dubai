@@ -27,6 +27,9 @@ type Props = {
     termsLink: string;
     and: string;
     privacyLink: string;
+    successMessage: string;
+    errorMessage: string;
+    submit?: string;
   };
 };
 const ContactForm = (props: Props) => {
@@ -40,6 +43,8 @@ const ContactForm = (props: Props) => {
     locationName,
     translations
   } = props;
+
+  const btnTextTranslated = translations?.submit || btnText
 
   const [showSuccess, setShowSuccess] = useState(false);
   const [showError, setShowError] = useState(false);
@@ -183,7 +188,7 @@ const ContactForm = (props: Props) => {
               size={20}
               className="mt-1"
             />
-            <p>Your message has been sent successfully</p>
+            <p>{translations.successMessage}</p>
           </div>
         ) : (
           <>
@@ -218,7 +223,7 @@ const ContactForm = (props: Props) => {
 
               {btnDisplay === "inline" && (
                 <ContactFormButton
-                  text={btnText}
+                  text={btnTextTranslated}
                   className={btnClassName}
                 />
               )}
@@ -227,7 +232,7 @@ const ContactForm = (props: Props) => {
             {btnDisplay === "block" && (
               <div className="flex justify-start mt-8">
                 <ContactFormButton
-                  text={btnText}
+                  text={btnTextTranslated}
                   loading={btnLoading}
                   className={btnClassName}
                 />
@@ -239,7 +244,7 @@ const ContactForm = (props: Props) => {
                   size={20}
                   className="mt-1"
                 />
-                <p>Something went wrong. Please try again later.</p>
+                <p>{translations.errorMessage}</p>
               </div>
             )}
           </>

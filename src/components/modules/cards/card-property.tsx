@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { LocationTranslation } from "../../../../types";
+import { LocationTranslation } from "@root/types";
 import { getLocationName } from "@/lib/utils";
 
 type Props = {
@@ -49,10 +49,10 @@ const CardProperty = (props: Props) => {
       {/* image container */}
       <div className="relative rounded-[14px] aspect-[4/3] lg:aspect-auto overflow-hidden">
         <div className=" absolute top-[21px] left-[21px] z-20 space-x-2">
-          <span className=" font-medium text-xs text-[#001F3F] bg-[#FF9C00] w-[30px] h-20 px-3 py-1.5 rounded-full">
+          <span className=" font-medium text-xs text-[#001F3F] bg-[#FF9C00] w-[30px] h-20 px-3 py-1.5 rounded-full uppercase">
             FOR SALE
           </span>
-          <span className=" font-medium text-xs text-[#F7F9FC] bg-[#004170] w-[30px] h-20 px-3 py-1.5 rounded-full">
+          <span className=" font-medium text-xs text-[#F7F9FC] bg-[#004170] w-[30px] h-20 px-3 py-1.5 rounded-full uppercase">
             FEATURED
           </span>
         </div>

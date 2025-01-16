@@ -1,6 +1,9 @@
+import { useTranslations } from "next-intl";
 import React from "react";
 
 const Hero = () => {
+  const t = useTranslations("area.hero");
+
   return (
     <div className="w-full h-[calc(100vh-80px)] relative">
       <div
@@ -34,18 +37,14 @@ const Hero = () => {
               lineHeight: "1.5"
             }}
           >
-            Dubai&apos;s top areas
-            <br />
-            for real estate investment
+            <div dangerouslySetInnerHTML={{ __html: t.raw("title") }} />
           </h1>
           {/* Subheading */}
           <p className="font-suisse text-lg sm:text-2xl mb-20 sm:mb-9 text-[#F7F9FC] max-w-[900px]">
-            Discover the most desirable areas in Dubai that are providing the
-            highest returns to informed property investors
+            {t("subTitle")}
           </p>
           <p className="font-suisse text-lg sm:text-2xl mb-20 sm:mb-9 text-[#F7F9FC] max-w-[900px]">
-            Demand for the Dubai luxury real estate segment is set to rise by
-            25% by 2028. Selecting the right property in the right area is key.
+            {t("secondSubTitle")}
           </p>
         </div>
       </div>

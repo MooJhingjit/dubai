@@ -10,7 +10,6 @@ const Contact = () => {
       <div className={"w-full pb-16 text-white"}>
         <div className="max-w-md px-4 mx-auto text-center sm:max-w-7xl md:px-8 xl:px-0">
           <ContactForm
-            btnText="Download your free report"
             btnClassName="w-full sm:w-[352px]"
             translations={{
               nameLabel: contactFormTranslations("nameLabel"),
@@ -27,8 +26,10 @@ const Contact = () => {
               termsText: contactFormTranslations("termsText"),
               termsLink: contactFormTranslations("termsLink"),
               and: contactFormTranslations("and"),
-              privacyLink: contactFormTranslations("privacyLink")
-
+              privacyLink: contactFormTranslations("privacyLink"),
+              successMessage: contactFormTranslations("successMessage"),
+              errorMessage: contactFormTranslations("errorMessage"),
+              submit: contactFormTranslations("downloadReport"),
             }}
           />
         </div>

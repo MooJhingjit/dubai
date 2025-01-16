@@ -6,7 +6,7 @@ import MobileNavigation from "./mobile-navation";
 
 const Navbar = () => {
   return (
-    <section className="h-[80px] bg-[#001F3F] flex items-center relative z-20">
+    <section className="h-[80px] bg-[#001F3F] flex items-center relative">
     <nav className="flex-1 w-full py-2 text-white ">
       <div className="max-w-md px-4 mx-auto sm:max-w-7xl sm:px-6 xl:px-0">
         <div className="relative flex items-center justify-between">
@@ -28,7 +28,8 @@ const Navbar = () => {
 
             <div className="flex space-x-3">
               <div className="lg:hidden">
-                <MobileNavigation />
+                <MobileNavigation
+                />
               </div>
 
               <div className="hidden lg:flex ">

@@ -4,9 +4,8 @@ import ContactForm from "../../modules/contact-form";
 import { useTranslations } from "next-intl";
 
 const ContactInformation = () => {
-
+  const t = useTranslations("contactUs.contactInformation");
   const contactFormTranslations = useTranslations("contactForm");
-
 
   return (
     <div className="w-full py-12 relative">
@@ -26,9 +25,7 @@ const ContactInformation = () => {
           {/* contact information */}
           <div className="bg-[#01416F] basis-full lg:basis-1/3 rounded-lg relative">
             <div className="px-10 py-12 text-white flex flex-col h-full">
-              <h2 className="text-[28px] mb-12 lg:mb-36">
-                Contact Information
-              </h2>
+              <h2 className="text-[28px] mb-12 lg:mb-36">{t("title")}</h2>
               <ul className="space-y-5 lg:space-y-10">
                 <li className="flex items-start space-x-4">
                   <Image
@@ -55,10 +52,7 @@ const ContactInformation = () => {
                     width={24}
                     height={24}
                   />
-                  <span>
-                    39th Floor,Media One Tower Al Falak Street​,Dubai​ Media
-                    City​Dubai​ ,487207
-                  </span>
+                  <span>{t("address")}</span>
                 </li>
               </ul>
 
@@ -120,19 +114,24 @@ const ContactInformation = () => {
                   nameLabel: contactFormTranslations("nameLabel"),
                   namePlaceholder: contactFormTranslations("namePlaceholder"),
                   lastNameLabel: contactFormTranslations("lastNameLabel"),
-                  lastNamePlaceholder: contactFormTranslations("lastNamePlaceholder"),
+                  lastNamePlaceholder: contactFormTranslations(
+                    "lastNamePlaceholder"
+                  ),
                   phoneLabel: contactFormTranslations("phoneLabel"),
                   phonePlaceholder: contactFormTranslations("phonePlaceholder"),
                   emailLabel: contactFormTranslations("emailLabel"),
                   emailOptional: contactFormTranslations("emailOptional"),
                   emailPlaceholder: contactFormTranslations("emailPlaceholder"),
                   messageLabel: contactFormTranslations("messageLabel"),
-                  messagePlaceholder: contactFormTranslations("messagePlaceholder"),
+                  messagePlaceholder:
+                    contactFormTranslations("messagePlaceholder"),
                   termsText: contactFormTranslations("termsText"),
                   termsLink: contactFormTranslations("termsLink"),
                   and: contactFormTranslations("and"),
-                  privacyLink: contactFormTranslations("privacyLink")
-
+                  privacyLink: contactFormTranslations("privacyLink"),
+                  successMessage: contactFormTranslations("successMessage"),
+                  errorMessage: contactFormTranslations("errorMessage"),
+                  submit: contactFormTranslations("submit")
                 }}
               />
             </div>
@@ -152,4 +151,3 @@ const ContactInformation = () => {
 };
 
 export default ContactInformation;
-

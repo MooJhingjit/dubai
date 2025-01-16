@@ -1,6 +1,9 @@
+import { useTranslations } from "next-intl";
 import React from "react";
 
 const Hero = () => {
+  const t = useTranslations("contactUs.hero");
+
   return (
     <div
       className="relative w-full h-[217px] bg-cover bg-top bg-no-repeat flex items-center"
@@ -17,7 +20,7 @@ const Hero = () => {
             lineHeight: "1.5"
           }}
         >
-          Contact our team
+          {t("title")}
         </h1>
         {/* Subheading */}
         <p
@@ -26,8 +29,7 @@ const Hero = () => {
             lineHeight: "1.4"
           }}
         >
-          Submit your enquiry below and a member of our team will contact you
-          shortly
+          {t("subTitle")}
         </p>
       </div>
     </div>

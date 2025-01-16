@@ -42,7 +42,11 @@
     "termsText": "I agree with",
     "termsLink": "Terms of Use",
     "and": "and",
-    "privacyLink": "Privacy Policy"
+    "privacyLink": "Privacy Policy",
+    "successMessage": "Your message has been sent successfully.",
+    "errorMessage": "Something went wrong. Please try again later.",
+    "submit": "Submit",
+    "downloadReport": "Download your free report"
   },
   "footer": {
     "about": "About",
@@ -62,6 +66,7 @@
     "privacy": "Privacy policy"
   },
   "navigation": {
+    "home": "Home",
     "areas": "Areas",
     "properties": "Properties",
     "about": "About",
@@ -96,12 +101,51 @@
       "imageAlt": "About Knight Frank MENA"
     }
   },
+  "contactUs": {
+    "meta": {
+      "title": "Contact Knight Frank MENA",
+      "description": "Discover Dubai's most profitable real estate investment opportunities with Knight Frank's expert analysts. Access exclusive insights into Dubai's luxury property market."
+    },
+    "hero": {
+      "title": "Contact our team",
+      "subTitle": "Submit your enquiry below and a member of our team will contact you shortly"
+    },
+    "contactInformation": {
+      "title": "Contact Information",
+      "address": "39th Floor,Media One Tower Al Falak Street​,Dubai​ Media City​Dubai​ ,487207"
+    }
+  },
   "area": {
     "meta": {
       "title": "Dubai's top areas for real estate investment | Knight Frank",
       "description": "Discover Dubai's most profitable real estate investment opportunities with Knight Frank's expert analysts. Access exclusive insights into Dubai's luxury property market."
     },
+    "hero": {
+      "title": "Dubai&apos;s top areas <br /> for real estate investment",
+      "subTitle": "Discover the most desirable areas in Dubai that are providing the highest returns to informed property investors",
+      "secondSubTitle": "Demand for the Dubai luxury real estate segment is set to rise by 25% by 2028. Selecting the right property in the right area is key."
+    },
+    "discover": {
+      "title": "Discover the areas set to maximise your investment returns"
+    },
+    "topAreas": {
+      "title": "Top investment areas in Dubai"
+    },
     "pages": {
+      "hero": {
+        "title": "Exclusive investment opportuities in",
+        "subTitle": "Discover the most desirable areas in {locationName} that are providing the hightest returns to imformed property investors",
+        "cta": "View {locationName} Properties"
+      },
+      "contact": {
+        "title": " Everything you need to know <br></br> about buying property in {locationName}.",
+        "subTitle": "Get access to exclusive investment opportunities before they hit the market"
+      },
+      "properties": {
+        "title": "{locationName} investment properties for sale",
+        "subTitle": "Discover the most desirable areas in Dubai that are providing the highest returns to informed property investors",
+        "cta": "See more"
+      },
       "palm-jumeirah": {
         "meta": {
           "title": "Palm Jumeirah",
@@ -157,7 +201,7 @@
           "title": "Downtown Dubai",
           "description": "Downtown Dubai"
         },
-        "locationId": "6",
+        "locationId": "9901",
         "image": "/dubai/areas/dubai-downtown.jpg",
         "name": "Downtown Dubai",
         "slug": "dubai-downtown"
