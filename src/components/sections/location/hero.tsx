@@ -7,7 +7,7 @@ type Props = {
 };
 const Hero = (props: Props) => {
   const { image, locationName } = props;
-  const t = useTranslations("area.pages.hero");
+  const t = useTranslations("area.pageSection.hero");
 
   return (
     <div className="w-full h-[calc(100vh-80px)] relative">

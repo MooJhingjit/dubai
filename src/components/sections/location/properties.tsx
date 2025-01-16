@@ -20,7 +20,7 @@ type Props = {
 };
 const Properties = (props: Props) => {
   const { locationName, properties } = props;
-  const t = useTranslations("area.pages.properties");
+  const t = useTranslations("area.pageSection.properties");
 
   return (
     <div className="w-full pb-7 pt-[45px]">

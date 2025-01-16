@@ -8,7 +8,7 @@ type Props = {
 };
 const Contact = (props: Props) => {
   const { locationName } = props;
-  const t = useTranslations("area.pages.contact");
+  const t = useTranslations("area.pageSection.contact");
   const contactFormTranslations = useTranslations("contactForm");
   return (
     <div className="w-full pt-14 pb-32 relative">
