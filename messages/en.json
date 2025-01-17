@@ -71,7 +71,8 @@
     "properties": "Properties",
     "about": "About",
     "people": "People",
-    "contact": "Contact Us"
+    "contact": "Contact Us",
+    "seeAllAreas": "See all areas"
   },
   "aboutUs": {
     "meta": {
@@ -113,6 +114,25 @@
     "contactInformation": {
       "title": "Contact Information",
       "address": "39th Floor,Media One Tower Al Falak Street​,Dubai​ Media City​Dubai​ ,487207"
+    }
+  },
+  "people": {
+    "meta": {
+      "title": "Meet the Knight Frank MENA Team",
+      "description": "Discover Dubai's most profitable real estate investment opportunities with Knight Frank's expert analysts. Access exclusive insights into Dubai's luxury property market."
+    },
+    "hero": {
+      "title": "Meet our people",
+      "subTitle": "Our team is dedicated to exceeding your property goals"
+    },
+    "team": {
+      "title": "Dubai real estate experts",
+      "subTitle": "Speak to one of our area investment specialists today",
+      "languageSpoken": "Languages Spoken",
+      "experience": "Experience"
+    },
+    "contact": {
+      "title": "Contact our experts today"
     }
   },
   "area": {

@@ -23,6 +23,7 @@ export function MobileNavigation() {
         jumeirahBayIslands: tLocation("jumeirah-bay-islands.name"),
         dubaiIslands: tLocation("dubai-islands.name"),
         downtownDubai: tLocation("dubai-downtown.name"),
+        seeAllAreas: t("seeAllAreas"),
         home: t("home"),
         areas: t("areas"),
         properties: t("properties"),

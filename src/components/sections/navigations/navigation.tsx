@@ -44,7 +44,7 @@ const Navigation = () => {
 
   return (
     <div className="flex items-center justify-between relative z-40">
-      <NavigationMenu>
+      <NavigationMenu viewportClassName="border-none rounded-3xl -translate-x-1/2 mt-8 left-5 bg-[#004170] shadow-lg">
         <NavigationMenuList className="gap-12 xl:gap-24">
           <NavigationMenuItem className="flex items-center">
             <NavigationMenuTrigger
@@ -54,16 +54,10 @@ const Navigation = () => {
   [&>svg]:size-4
             "
             >
-              <Link
-                href="/areas"
-                legacyBehavior
-                passHref
-              >
-                {t("areas")}
-              </Link>
+              {t("areas")}
             </NavigationMenuTrigger>
-            <NavigationMenuContent className="bg-[#001F3F] text-white shadow">
-              <ul className="grid w-[350px] gap-3 p-2 md:grid-cols-1">
+            <NavigationMenuContent className="bg-[#004170]/80 text-white">
+              <ul className="w-[350px] text-center font-suisse space-y-4">
                 {areas.map((area) => (
                   <ListItem
                     key={area.slug}
@@ -71,6 +65,11 @@ const Navigation = () => {
                     title={area.name}
                   />
                 ))}
+                <ListItem
+                  href="/areas/"
+                  title={`${t("seeAllAreas")} >`}
+                  className="!text-[#FFB944]"
+                />
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
@@ -127,7 +126,7 @@ const ListItem = React.forwardRef<
           ref={ref}
           href={href as string}
           className={cn(
-            " block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            " block select-none rounded-none p-4 leading-none no-underline outline-none transition-colors hover:bg-[#F7F9FC] hover:text-[#004170] focus:bg-[#F7F9FC] focus:text-[#004170] text-base",
             className
           )}
           {...props}

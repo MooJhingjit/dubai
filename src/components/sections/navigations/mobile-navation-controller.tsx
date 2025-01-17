@@ -33,6 +33,7 @@ type Props = {
     jumeirahBayIslands: string;
     dubaiIslands: string;
     downtownDubai: string;
+    seeAllAreas: string;
     home: string;
     areas: string;
     properties: string;
@@ -90,22 +91,6 @@ export function MobileNavigationController(props: Props) {
         <div className="flex justify-center items-center w-full h-full">
           <ul className="text-center space-y-10 font-poppins text-[#F7F9FC]">
             <li>
-              {/* FFA500 active */}
-              <Link
-                href="/"
-                onClick={closeSheet}
-              >
-                {translations.home}
-              </Link>
-            </li>
-            <li>
-              {/* <Link
-                href="/dubai/areas"
-                className="text-[#F7F9FC]"
-                onClick={closeSheet}
-              >
-                Areas
-              </Link> */}
               <Accordion
                 type="single"
                 collapsible
@@ -115,24 +100,27 @@ export function MobileNavigationController(props: Props) {
                   value="item-1"
                   className="border-none text-[#F7F9FC]"
                 >
-                  <AccordionTrigger className="hover:no-underline justify-center space-x-2 [&>svg]:text-[#F7F9FC]">
-                    <Link
-                      href="/areas"
-                      onClick={closeSheet}
-                    >
-                      {translations.areas}
-                    </Link>
+                  <AccordionTrigger className="hover:no-underline justify-center space-x-1 p-0 text-[#FFB944] [&>svg]:text-[#FFB944]">
+                    {translations.areas}
                   </AccordionTrigger>
-                  <AccordionContent className="flex flex-col space-y-7 py-4">
+                  <AccordionContent className="flex flex-col space-y-1 py-3 text-xs">
                     {slugsArray?.map((slug) => (
                       <Link
                         key={slug}
                         href={`/areas/${slugs[slug]}`}
                         onClick={closeSheet}
+                        className="py-1.5 px-6"
                       >
                         {translations[slug]}
                       </Link>
                     ))}
+                    <Link
+                      href="/areas"
+                      className="text-[#FFB944] py-1.5 px-6"
+                      onClick={closeSheet}
+                    >
+                      {translations.seeAllAreas} {">"}
+                    </Link>
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
@@ -155,8 +143,17 @@ export function MobileNavigationController(props: Props) {
             </li>
             <li>
               <Link
+                href="/people"
+                onClick={closeSheet}
+              >
+                {translations.people}
+              </Link>
+            </li>
+            <li>
+              <Link
                 href="/contact-us"
                 onClick={closeSheet}
+                 className="bg-white text-[#1E1E1E] py-1.5 px-6 rounded-full shadow-md h-[44px] flex items-center"
               >
                 {translations.contactUs}
               </Link>

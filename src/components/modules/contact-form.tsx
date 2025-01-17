@@ -31,6 +31,7 @@ type Props = {
     errorMessage: string;
     submit?: string;
   };
+  textAreaHeight?: string;
 };
 const ContactForm = (props: Props) => {
   const {
@@ -41,10 +42,11 @@ const ContactForm = (props: Props) => {
     btnClassName,
     isFullInput,
     locationName,
-    translations
+    translations,
+    textAreaHeight = "h-[214px]"
   } = props;
 
-  const btnTextTranslated = translations?.submit || btnText
+  const btnTextTranslated = translations?.submit || btnText;
 
   const [showSuccess, setShowSuccess] = useState(false);
   const [showError, setShowError] = useState(false);
@@ -177,7 +179,10 @@ const ContactForm = (props: Props) => {
                 name="message"
                 placeholder={translations.messagePlaceholder}
                 rows={5}
-                className="w-full p-4 h-[214px] text-sm border border-gray-400 rounded-sm shadow-sm focus:ring-black focus:border-black"
+                className={cn(
+                  textAreaHeight,
+                  "w-full p-4 text-sm border border-gray-400 rounded-sm shadow-sm focus:ring-black focus:border-black"
+                )}
               />
             </div>
           )}
