@@ -8,19 +8,27 @@ import CardArea from "../../modules/cards/card-area";
 const data = [
   {
     name: "Palm Jumeirah",
-    image: "/dubai/invest-1.png"
+    image: "/dubai/home/invest-1.png"
   },
   {
-    name: "Dubai Island",
-    image: "/dubai/invest-2.png"
+    name: "Dubai Hills Estate",
+    image: "/dubai/home/invest-2.png"
   },
   {
     name: "Emirates Hills",
-    image: "/dubai/invest-3.png"
+    image: "/dubai/home/invest-3.png"
   },
   {
-    name: "dubai marina",
-    image: "/dubai/invest-4.png"
+    name: "Jumeirah Bay Islands",
+    image: "/dubai/home/invest-4.png"
+  },
+  {
+    name: "Dubai Islands",
+    image: "/dubai/home/invest-5.png"
+  },
+  {
+    name: "Downtown Dubai",
+    image: "/dubai/home/invest-6.png"
   }
 ];
 const InvestmentSlider = () => {
