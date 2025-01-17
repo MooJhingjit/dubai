@@ -146,6 +146,7 @@ const agents = [
   }
 ];
 
+
 const Team = () => {
   const t = useTranslations("people.team");
 
