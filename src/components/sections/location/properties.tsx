@@ -25,7 +25,7 @@ const Properties = (props: Props) => {
   return (
     <div className="w-full pb-7 pt-[45px]">
       <div className="max-w-md px-4 mx-auto sm:max-w-7xl md:px-8 xl:px-0">
-        <h2 className="mb-5 text-3xl text-[#FFB944] font-romain sm:text-5xl !leading-[64px]">
+        <h2 className="mb-6 text-3xl text-[#FFB944] font-romain sm:text-5xl !leading-[64px]">
           {t("title", { locationName })}
         </h2>
         <p className="font-suisse text-lg sm:text-[32px] mb-5 text-[#F7F9FC] !leading-[45px]">

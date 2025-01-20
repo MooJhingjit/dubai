@@ -175,6 +175,7 @@
         },
         "locationId": "9901",
         "image": "/dubai/areas/palm-jumeirah.jpg",
+        "imageHero": "/dubai/locations/palm-jumeirah.jpg",
         "name": "Palm Jumeirah",
         "slug": "palm-jumeirah"
       },
@@ -185,6 +186,7 @@
         },
         "locationId": "9901",
         "image": "/dubai/areas/dubai-hills-estate.jpg",
+        "imageHero": "/dubai/locations/dubai-hills-estate.jpg",
         "name": "Dubai Hills Estate",
         "slug": "dubai-hills-estate"
       },
@@ -195,6 +197,7 @@
         },
         "locationId": "9901",
         "image": "/dubai/areas/emirates-hills.jpg",
+        "imageHero": "/dubai/locations/emirates-hills.jpg",
         "name": "Emirates Hills",
         "slug": "emirates-hills"
       },
@@ -205,6 +208,7 @@
         },
         "locationId": "9901",
         "image": "/dubai/areas/jumeirah-bay-islands.jpg",
+        "imageHero": "/dubai/locations/jumeirah-bay-islands.jpg",
         "name": "Jumeirah Bay Islands",
         "slug": "jumeirah-bay-islands"
       },
@@ -215,6 +219,7 @@
         },
         "locationId": "9901",
         "image": "/dubai/areas/dubai-islands.jpg",
+        "imageHero": "/dubai/locations/dubai-islands.jpg",
         "name": "Dubai Islands",
         "slug": "dubai-islands"
       },
@@ -225,6 +230,7 @@
         },
         "locationId": "9901",
         "image": "/dubai/areas/dubai-downtown.jpg",
+        "imageHero": "/dubai/locations/downtown-dubai.jpg",
         "name": "Downtown Dubai",
         "slug": "dubai-downtown"
       }

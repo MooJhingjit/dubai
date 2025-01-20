@@ -30,14 +30,14 @@ const Hero = (props: Props) => {
 
       {/* <div className="z-20 absolute inset-0 bg-gradient-to-r to-transparent  from-[#2b333c] via-[#293038]  via-40% "></div> */}
 
-      <div className="relative z-30 flex items-center max-w-md px-4 py-10 mx-auto sm:max-w-7xl sm:px-6 lg:px-8 xl:px-0 md:py-16">
+      <div className="relative z-30 h-full flex items-center max-w-md px-4 py-10 mx-auto sm:max-w-7xl sm:px-6 lg:px-8 xl:px-0 md:py-16">
         {/* Background image */}
 
         {/* Content Section */}
-        <div className="text-center mt-28 sm:mt-14 sm:text-left">
+        <div className="text-center  sm:text-left">
           {/* Heading */}
           <h1
-            className="font-romain  max-w-[900px] text-4xl sm:text-7xl   text-[#F7F9FC] mb-4"
+            className="font-romain  max-w-[900px] text-4xl sm:text-6xl md:text-7xl   text-[#F7F9FC] mb-4"
             style={{
               lineHeight: "1.5"
             }}
@@ -47,7 +47,7 @@ const Hero = (props: Props) => {
           </h1>
           {/* Subheading */}
           <p
-            className="font-suisse text-lg sm:text-[32px] mb-20 sm:mb-9 text-[#F7F9FC] max-w-[900px]"
+            className="font-suisse text-lg md:text-[32px] mb-20 sm:mb-9 text-[#F7F9FC] max-w-[950px]"
             style={{
               lineHeight: "1.4"
             }}
